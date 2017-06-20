@@ -1,0 +1,24 @@
+fieldset.age
+  legend.title.age__title <strong>2</strong> Tu perro es…
+  ul.age__list
+    li.age__item
+      label(for="age__puppy").age__label
+        figure.age__figure
+          img(src="assets/img/2/cachorro-compressor.png", alt="Cachorro").age__img
+          figcaption.age__caption Cachorro
+        input(type="radio", name="age", value="puppy", checked).age__radio#age__puppy
+    li.age__item
+      label(for="age__adult").age__label
+        figure.age__figure
+          img(src="assets/img/2/adulto-compressor.png", alt="Adulto").age__img
+          figcaption.age__caption Adulto
+        input(type="radio", name="age", value="adult").age__radio#age__adult
+    li.age__item
+      label(for="age__senior").age__label
+        figure.age__figure
+          img(src="assets/img/2/senior-compressor.png", alt="Senior").age__img
+          figcaption.age__caption Senior
+        input(type="radio", name="age", value="senior").age__radio#age__senior
+  ul.buttons.size__buttons
+    button.button.size__cancel--active Cancelar
+    button.button.size__next--inactive Siguiente

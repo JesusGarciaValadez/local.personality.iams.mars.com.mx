@@ -1,0 +1,34 @@
+fieldset.behavior
+  legend.title.behavior__title <strong>3</strong> ¿Cuál de estos comportamientos describe mejor a tu perro?
+  ul.behavior__list
+    li.behavior__item
+      label(for="behavior__nervous").behavior__label
+        figure.behavior__figure
+          img(src="assets/img/3/nervioso-compressor.png", alt="Adulto").behavior__img
+          figcaption.behavior__caption.
+            Es muy nervioso, oye un ruido y tiembla o ladra (después se le pasa).
+        input(type="radio", name="behavior", value="nervous").behavior__radio#behavior__nervous
+    li.behavior__item
+      label(for="behavior__playful").behavior__label
+        figure.behavior__figure
+          img(src="assets/img/3/juguetes-compressor.png", alt="Senior").behavior__img
+          figcaption.behavior__caption.
+            Corre por el departamento, sus juguetes están tirados y nunca para.
+        input(type="radio", name="behavior", value="playful").behavior__radio#behavior__playful
+    li.behavior__item
+      label(for="behavior__territorial").behavior__label
+        figure.behavior__figure
+          img(src="assets/img/3/territorial-compressor.png", alt="Senior").behavior__img
+          figcaption.behavior__caption.
+            Es territorial, nadie se sienta en su sillón y da vueltas en el patio todo el día.
+        input(type="radio", name="behavior", value="territorial").behavior__radio#behavior__territorial
+    li.behavior__item
+      label(for="behavior__sleeps").behavior__label
+        figure.behavior__figure
+          img(src="assets/img/3/duerme-compressor.png", alt="Cachorro").behavior__img
+          figcaption.behavior__caption.
+            Duerme en donde sea, podría haber un concierto y no se despierta.
+        input(type="radio", name="behavior", value="sleeps").behavior__radio#behavior__sleeps
+  ul.buttons.size__buttons
+    button.button.size__cancel--active Cancelar
+    button.button.size__next--inactive Siguiente

@@ -1,0 +1,16 @@
+extends layout/layout.pug
+
+block content
+  section.intro
+    img(src="assets/img/pleca-test.png", alt="Test").intro__img
+    h1.title.intro__title Descubre la <strong>personalidad de tu perro</strong>
+    a(href="" title="COMENZAR").button.intro__button Comenzar
+  form(action="", method="POST").personality
+    include personality-test/step-one.pug
+    include personality-test/step-two.pug
+    include personality-test/step-three.pug
+    include personality-test/step-four.pug
+    include personality-test/step-five.pug
+    include personality-test/step-six.pug
+    include personality-test/step-seven.pug
+  include personality-test/results.pug

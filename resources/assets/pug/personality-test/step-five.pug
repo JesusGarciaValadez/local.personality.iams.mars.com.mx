@@ -1,0 +1,34 @@
+fieldset.game
+  legend.title.game__title <strong>5</strong> ¿Qué es lo que más cuidas de tu perro?
+  ul.game__list
+    li.game__item
+      label(for="game__closer").game__label
+        figure.game__figure
+          img(src="assets/img/5/cerca-compressor.png", alt="Perro cerca de su dueño").game__img
+          figcaption.game__caption.
+            No es mucho de jugar, prefiere estar cerca de mí
+        input(type="radio", name="game", value="closer").game__radio#game__closer
+    li.game__item
+      label(for="game__playful").game__label
+        figure.game__figure
+          img(src="assets/img/5/zapatos-compressor.png", alt="Cachorro mordiendo un zapato").game__img
+          figcaption.game__caption.
+            La pelota, mis zapatos, todo es un juguete para él
+        input(type="radio", name="game", value="playful").game__radio#game__playful
+    li.game__item
+      label(for="game__hideaway").game__label
+        figure.game__figure
+          img(src="assets/img/5/escondite-compressor.png", alt="Perro descubriendo un escondite").game__img
+          figcaption.game__caption.
+            Le escondo juguetes en la casa y él los encuentra
+        input(type="radio", name="game", value="hideaway").game__radio#game__hideaway
+    li.game__item
+      label(for="game__watch").game__label
+        figure.game__figure
+          img(src="assets/img/5/viendo-compressor.png", alt="Perro viendo a tu amo").game__img
+          figcaption.game__caption.
+            Solo se me queda viendo cuando le aviento un juguete
+        input(type="radio", name="game", value="watch").game__radio#game__watch
+  ul.buttons.size__buttons
+    button.button.size__cancel--active Cancelar
+    button.button.size__next--inactive Siguiente
