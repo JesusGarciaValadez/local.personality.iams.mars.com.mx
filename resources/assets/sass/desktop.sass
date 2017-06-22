@@ -1,0 +1,110 @@
+html, body, main
+  .button
+  .header
+    display: flex
+    flex-flow: row nowrap
+    height: 80px
+    .header__img
+      margin: 20px 90px
+      width: 13%
+    .header__nav
+      height: 100%
+      margin-left: 35px
+      width: 830px
+      .header__ul
+        display: flex
+        flex-flow: row nowrap
+        height: 100%
+        margin: 0 auto
+        padding: 0
+        width: 100%
+        .header__li, .header__li--active
+          box-sizing: border-box
+          display: flex
+          flex-flow: row nowrap
+          height: 100%
+          width: 103.75px
+        .header__li
+          background-color: $header__li--inactive-color
+          border-right: 0.5px solid $header__li--inactive-border-color
+          .header__p
+            align-self: center
+            color: $header__p--inactive-color
+            display: inline-block
+            font-size: 11px
+            line-height: 1.5em
+            margin: 0
+            padding-left: 18px
+            text-transform: uppercase
+            .header__a
+              color: inherit
+              text-decoration: none
+        .header__li--active
+          background-color: transparent
+          border-right: 1px solid
+          border: 0 none transparent
+          border-bottom: 5px solid $header__li-border-color
+          .header__p
+            color: $header__p-color
+  .section
+    background-position: left top
+    background-size: auto 100%
+    .section__div
+      position: absolute
+      right: 0
+      width: 520px
+    .section__img
+      top: 45px
+      right: -60px
+      width: auto
+    .section__img-logo
+      margin: 180px auto 0
+      width: 52%
+    .section__h1
+      clear: both
+      color: $section__h1-color
+      display: block
+      font-size: 48px
+      line-height: 1.3em
+      margin: 40px 0 0
+      text-shadow: unset
+      .section__strong
+        font-size: 60px
+        color: $section__strong-color
+      .section__span
+    .section__a
+      font-size: 17px
+      left: 50%
+      letter-spacing: 1px
+      margin: 25px auto 0
+      position: relative
+      transform: translate( -50%, 0 )
+  .form
+    display: none
+    left: 0
+    position: absolute
+    top: 0
+    .fieldset.height
+      .fieldset__legend
+        .fieldset__strong
+      .fieldset__ul
+        .fieldset__li
+          .fieldset__label
+            .fieldset__figure
+              .fieldset__img
+              .fieldset__caption
+            .fieldset__radio
+      .fieldset__buttons
+        .button.fieldset__cancel--active
+        .button.fieldset__next--inactive
+  .results
+    .title.results__h3
+    .results__wrapper
+      .results__div--left
+        .dog.results__img
+      .results__div--right
+        .results__h3
+        .results__p
+        .results__div
+          .product.results__img
+      .button.results__clear

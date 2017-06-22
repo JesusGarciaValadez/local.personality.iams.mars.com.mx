@@ -15,327 +15,341 @@
     <!-- For iPad:-->
     <link rel="apple-touch-icon-precomposed" sizes="32x32" href="/favicon.png">
     <link rel="mask-icon" sizes="any" href="/favicon.png">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!--script(src='assets/js/vendor/modernizr-3.5.0.min.js')-->
   </head>
   <body>
     <main>
-      <header><img src="assets/img/logoIAMS.svg" alt="IAMS">
-        <nav class="active">
-          <ul>
-            <li>
-              <p><a href="" title="1. Tamaño">1.<br /></a></p>
+      <header class="header"><img class="header__img" src="assets/img/logoIAMS.svg" alt="IAMS">
+        <nav class="header__nav header__nav--inactive">
+          <ul class="header__ul">
+            <li class="header__li header__li--active">
+              <p class="header__p"><a class="header__a" href="" title="1. Tamaño">1.<br />Tamaño</a></p>
             </li>
-            <li>
-              <p><a href="" title="2. Edad">2.<br />Edad</a></p>
+            <li class="header__li">
+              <p class="header__p"><a class="header__a" href="" title="2. Edad">2.<br />Edad</a></p>
             </li>
-            <li>
-              <p><a href="" title="3. Conducta">3.<br />Conducta</a></p>
+            <li class="header__li">
+              <p class="header__p"><a class="header__a" href="" title="3. Conducta">3.<br />Conducta</a></p>
             </li>
-            <li>
-              <p><a href="" title="4. Talla">4.<br />Talla</a></p>
+            <li class="header__li">
+              <p class="header__p"><a class="header__a" href="" title="4. Talla">4.<br />Talla</a></p>
             </li>
-            <li>
-              <p><a href="" title="5. Juego">5.<br />Juego</a></p>
+            <li class="header__li">
+              <p class="header__p"><a class="header__a" href="" title="5. Juego">5.<br />Juego</a></p>
             </li>
-            <li>
-              <p><a href="" title="6. Social">6.<br />Social</a></p>
+            <li class="header__li">
+              <p class="header__p"><a class="header__a" href="" title="6. Social">6.<br />Social</a></p>
             </li>
-            <li>
-              <p><a href="" title="7. Cuidado">7.<br />Cuidado</a></p>
+            <li class="header__li">
+              <p class="header__p"><a class="header__a" href="" title="7. Cuidado">7.<br />Cuidado</a></p>
             </li>
-            <li>
-              <p>
-                <Resultado></Resultado>
-              </p>
+            <li class="header__li">
+              <p class="header__p">Resultado</p>
             </li>
           </ul>
         </nav>
       </header>
-      <section class="intro"><img class="intro__img" src="assets/img/pleca-test.png" alt="Test">
-        <h1 class="title intro__title">Descubre la <strong>personalidad de tu perro</strong></h1><a class="button intro__button" href="" title="COMENZAR">Comenzar</a>
+      <section class="section">
+        <div class="section__div"><img class="section__img" src="assets/img/pleca-test.png" alt="Test"><img class="section__img-logo" src="assets/img/logoIAMS.svg" alt="IAMS">
+          <h1 class="section__h1">Descubre la <br /><strong class="section__strong">personalidad</strong> <br /><span class="section__span">de tu perro</span></h1><a class="button section__a" href="#" title="COMENZAR">Comenzar</a>
+        </div>
       </section>
-      <form class="personality" action="" method="POST">
-        <fieldset class="height">
-          <legend class="title height__title"><strong>1</strong> ¿De qué tamaño es tu perro?</legend>
-          <ul class="height__list">
-            <li class="height__item">
-              <label class="height__label" for="height__small">
-                <figure class="height__figure"><img class="height__img" src="assets/img/1/mini-compressor.png" alt="Tamaño de perro mini o chico">
-                  <figcaption class="height__caption">Mini o chico</figcaption>
+      <form class="form" action="action.php" method="POST">
+        <fieldset class="fieldset height" id="height">
+          <h2 class="fieldset__h2">
+            <legend class="fieldset__legend">1</legend> ¿De qué tamaño es tu perro?
+          </h2>
+          <ul class="fieldset__ul">
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="height__small">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/1/mini-compressor.png" alt="Tamaño de perro mini o chico">
+                  <figcaption class="fieldset__caption">Mini o chico</figcaption>
                 </figure>
-                <input class="height__radio" type="radio" name="height" value="small" checked id="height__small">
+                <input class="fieldset__radio" type="radio" name="height" value="small" checked id="height__small">
               </label>
             </li>
-            <li class="height__item">
-              <label class="height__label" for="height__medium">
-                <figure class="height__figure"><img class="height__img" src="assets/img/1/mediano-compressor.png" alt="Tamaño de perro mediano">
-                  <figcaption class="height__caption">Mediano</figcaption>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="height__medium">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/1/mediano-compressor.png" alt="Tamaño de perro mediano">
+                  <figcaption class="fieldset__caption">Mediano</figcaption>
                 </figure>
-                <input class="height__radio" type="radio" name="height" value="medium" id="height__medium">
+                <input class="fieldset__radio" type="radio" name="height" value="medium" id="height__medium">
               </label>
             </li>
-            <li class="height__item">
-              <label class="height__label" for="height__big">
-                <figure class="height__figure"><img class="height__img" src="assets/img/1/grande-compressor.png" alt="Tamaño de perro grande">
-                  <figcaption class="height__caption">Grande</figcaption>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="height__big">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/1/grande-compressor.png" alt="Tamaño de perro grande">
+                  <figcaption class="fieldset__caption">Grande</figcaption>
                 </figure>
-                <input class="height__radio" type="radio" name="height" value="big" id="height__big">
-              </label>
-            </li>
-          </ul>
-          <ul class="buttons size__buttons">
-            <button class="button size__cancel--active"></button>
-            <button class="button size__next--inactive"></button>
-          </ul>
-        </fieldset>
-        <fieldset class="age">
-          <legend class="title age__title"><strong>2</strong> Tu perro es…</legend>
-          <ul class="age__list">
-            <li class="age__item">
-              <label class="age__label" for="age__puppy">
-                <figure class="age__figure"><img class="age__img" src="assets/img/2/cachorro-compressor.png" alt="Cachorro">
-                  <figcaption class="age__caption">Cachorro</figcaption>
-                </figure>
-                <input class="age__radio" type="radio" name="age" value="puppy" checked id="age__puppy">
-              </label>
-            </li>
-            <li class="age__item">
-              <label class="age__label" for="age__adult">
-                <figure class="age__figure"><img class="age__img" src="assets/img/2/adulto-compressor.png" alt="Adulto">
-                  <figcaption class="age__caption">Adulto</figcaption>
-                </figure>
-                <input class="age__radio" type="radio" name="age" value="adult" id="age__adult">
-              </label>
-            </li>
-            <li class="age__item">
-              <label class="age__label" for="age__senior">
-                <figure class="age__figure"><img class="age__img" src="assets/img/2/senior-compressor.png" alt="Senior">
-                  <figcaption class="age__caption">Senior</figcaption>
-                </figure>
-                <input class="age__radio" type="radio" name="age" value="senior" id="age__senior">
+                <input class="fieldset__radio" type="radio" name="height" value="big" id="height__big">
               </label>
             </li>
           </ul>
-          <ul class="buttons size__buttons">
-            <button class="button size__cancel--active">Cancelar</button>
-            <button class="button size__next--inactive">Siguiente</button>
+          <ul class="fieldset__buttons">
+            <button class="button fieldset__cancel--active"></button>
+            <button class="button fieldset__next--inactive"></button>
           </ul>
         </fieldset>
-        <fieldset class="behavior">
-          <legend class="title behavior__title"><strong>3</strong> ¿Cuál de estos comportamientos describe mejor a tu perro?</legend>
-          <ul class="behavior__list">
-            <li class="behavior__item">
-              <label class="behavior__label" for="behavior__nervous">
-                <figure class="behavior__figure"><img class="behavior__img" src="assets/img/3/nervioso-compressor.png" alt="Adulto">
-                  <figcaption class="behavior__caption">Es muy nervioso, oye un ruido y tiembla o ladra (después se le pasa).</figcaption>
+        <fieldset class="fieldset age" id="age">
+          <h2 class="fieldset__h2">
+            <legend class="fieldset__legend">2</legend> Tu perro es…
+          </h2>
+          <ul class="fieldset__ul">
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="age__puppy">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/2/cachorro-compressor.png" alt="Cachorro">
+                  <figcaption class="fieldset__caption">Cachorro</figcaption>
                 </figure>
-                <input class="behavior__radio" type="radio" name="behavior" value="nervous" id="behavior__nervous">
+                <input class="fieldset__radio" type="radio" name="age" value="puppy" checked id="age__puppy">
               </label>
             </li>
-            <li class="behavior__item">
-              <label class="behavior__label" for="behavior__playful">
-                <figure class="behavior__figure"><img class="behavior__img" src="assets/img/3/juguetes-compressor.png" alt="Senior">
-                  <figcaption class="behavior__caption">Corre por el departamento, sus juguetes están tirados y nunca para.</figcaption>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="age__adult">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/2/adulto-compressor.png" alt="Adulto">
+                  <figcaption class="fieldset__caption">Adulto</figcaption>
                 </figure>
-                <input class="behavior__radio" type="radio" name="behavior" value="playful" id="behavior__playful">
+                <input class="fieldset__radio" type="radio" name="age" value="adult" id="age__adult">
               </label>
             </li>
-            <li class="behavior__item">
-              <label class="behavior__label" for="behavior__territorial">
-                <figure class="behavior__figure"><img class="behavior__img" src="assets/img/3/territorial-compressor.png" alt="Senior">
-                  <figcaption class="behavior__caption">Es territorial, nadie se sienta en su sillón y da vueltas en el patio todo el día.</figcaption>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="age__senior">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/2/senior-compressor.png" alt="Senior">
+                  <figcaption class="fieldset__caption">Senior</figcaption>
                 </figure>
-                <input class="behavior__radio" type="radio" name="behavior" value="territorial" id="behavior__territorial">
-              </label>
-            </li>
-            <li class="behavior__item">
-              <label class="behavior__label" for="behavior__sleeps">
-                <figure class="behavior__figure"><img class="behavior__img" src="assets/img/3/duerme-compressor.png" alt="Cachorro">
-                  <figcaption class="behavior__caption">Duerme en donde sea, podría haber un concierto y no se despierta.</figcaption>
-                </figure>
-                <input class="behavior__radio" type="radio" name="behavior" value="sleeps" id="behavior__sleeps">
+                <input class="fieldset__radio" type="radio" name="age" value="senior" id="age__senior">
               </label>
             </li>
           </ul>
-          <ul class="buttons size__buttons">
-            <button class="button size__cancel--active">Cancelar</button>
-            <button class="button size__next--inactive">Siguiente</button>
+          <ul class="fieldset__buttons">
+            <button class="button fieldset__cancel--active"></button>
+            <button class="button fieldset__next--inactive"></button>
           </ul>
         </fieldset>
-        <fieldset class="size">
-          <legend class="title size__title"><strong>4</strong> ¿Cómo describirías físicamente a tu perro?</legend>
-          <ul class="size__list">
-            <li class="size__item">
-              <label class="size__label" for="size__fat-nor-thin">
-                <figure class="size__figure"><img class="size__img" src="assets/img/4/nigordoniflaco-compressor.png" alt="Ni gordo, ni flaco">
-                  <figcaption class="size__caption">Ni gordo ni flaco, pero es chiquito y engorda fácilmente</figcaption>
+        <fieldset class="fieldset behavior" id="behavior">
+          <h2 class="fieldset__h2">
+            <legend class="fieldset__legend">3</legend> ¿Cuál de estos comportamientos describe mejor a tu perro?
+          </h2>
+          <ul class="fieldset__ul">
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="behavior__nervous">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/3/nervioso-compressor.png" alt="Adulto">
+                  <figcaption class="fieldset__caption">Es muy nervioso, oye un ruido y tiembla o ladra (después se le pasa).</figcaption>
                 </figure>
-                <input class="size__radio" type="radio" name="size" value="fat_nor_thin" id="size__fat-nor-thin">
+                <input class="fieldset__radio" type="radio" name="behavior" value="nervous" id="behavior__nervous">
               </label>
             </li>
-            <li class="size__item">
-              <label class="size__label" for="size__thin">
-                <figure class="size__figure"><img class="size__img" src="assets/img/4/delgado-compressor.png" alt="Delgado">
-                  <figcaption class="size__caption">Creo que esta bajo de pero, se notan sus costillas</figcaption>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="behavior__playful">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/3/juguetes-compressor.png" alt="Senior">
+                  <figcaption class="fieldset__caption">Corre por el departamento, sus juguetes están tirados y nunca para.</figcaption>
                 </figure>
-                <input class="size__radio" type="radio" name="size" value="thin" id="size__thin">
+                <input class="fieldset__radio" type="radio" name="behavior" value="playful" id="behavior__playful">
               </label>
             </li>
-            <li class="size__item">
-              <label class="size__label" for="size__muscular">
-                <figure class="size__figure"><img class="size__img" src="assets/img/4/musculos-compressor.png" alt="Músculos">
-                  <figcaption class="size__caption">Sus músculos no se ven ni se sientes fuertes, no están tan marcados</figcaption>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="behavior__territorial">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/3/territorial-compressor.png" alt="Senior">
+                  <figcaption class="fieldset__caption">Es territorial, nadie se sienta en su sillón y da vueltas en el patio todo el día.</figcaption>
                 </figure>
-                <input class="size__radio" type="radio" name="size" value="muscular" id="size__muscular">
+                <input class="fieldset__radio" type="radio" name="behavior" value="territorial" id="behavior__territorial">
               </label>
             </li>
-            <li class="size__item">
-              <label class="size__label" for="size__overweight">
-                <figure class="size__figure"><img class="size__img" src="assets/img/4/sobrepeso-compressor.png" alt="Sobrepeso">
-                  <figcaption class="size__caption">Está pasado de peso y le cuesta mucho bajar de peso</figcaption>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="behavior__sleeps">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/3/duerme-compressor.png" alt="Cachorro">
+                  <figcaption class="fieldset__caption">Duerme en donde sea, podría haber un concierto y no se despierta.</figcaption>
                 </figure>
-                <input class="size__radio" type="radio" name="size" value="overweight" id="size__overweight">
-              </label>
-            </li>
-          </ul>
-          <ul class="buttons size__buttons">
-            <button class="button size__cancel--active">Cancelar</button>
-            <button class="button size__next--inactive">Siguiente</button>
-          </ul>
-        </fieldset>
-        <fieldset class="game">
-          <legend class="title game__title"><strong>5</strong> ¿Qué es lo que más cuidas de tu perro?</legend>
-          <ul class="game__list">
-            <li class="game__item">
-              <label class="game__label" for="game__closer">
-                <figure class="game__figure"><img class="game__img" src="assets/img/5/cerca-compressor.png" alt="Perro cerca de su dueño">
-                  <figcaption class="game__caption">No es mucho de jugar, prefiere estar cerca de mí</figcaption>
-                </figure>
-                <input class="game__radio" type="radio" name="game" value="closer" id="game__closer">
-              </label>
-            </li>
-            <li class="game__item">
-              <label class="game__label" for="game__playful">
-                <figure class="game__figure"><img class="game__img" src="assets/img/5/zapatos-compressor.png" alt="Cachorro mordiendo un zapato">
-                  <figcaption class="game__caption">La pelota, mis zapatos, todo es un juguete para él</figcaption>
-                </figure>
-                <input class="game__radio" type="radio" name="game" value="playful" id="game__playful">
-              </label>
-            </li>
-            <li class="game__item">
-              <label class="game__label" for="game__hideaway">
-                <figure class="game__figure"><img class="game__img" src="assets/img/5/escondite-compressor.png" alt="Perro descubriendo un escondite">
-                  <figcaption class="game__caption">Le escondo juguetes en la casa y él los encuentra</figcaption>
-                </figure>
-                <input class="game__radio" type="radio" name="game" value="hideaway" id="game__hideaway">
-              </label>
-            </li>
-            <li class="game__item">
-              <label class="game__label" for="game__watch">
-                <figure class="game__figure"><img class="game__img" src="assets/img/5/viendo-compressor.png" alt="Perro viendo a tu amo">
-                  <figcaption class="game__caption">Solo se me queda viendo cuando le aviento un juguete</figcaption>
-                </figure>
-                <input class="game__radio" type="radio" name="game" value="watch" id="game__watch">
+                <input class="fieldset__radio" type="radio" name="behavior" value="sleeps" id="behavior__sleeps">
               </label>
             </li>
           </ul>
-          <ul class="buttons size__buttons">
-            <button class="button size__cancel--active">Cancelar</button>
-            <button class="button size__next--inactive">Siguiente</button>
+          <ul class="fieldset__buttons">
+            <button class="button fieldset__cancel--active"></button>
+            <button class="button fieldset__next--inactive"></button>
           </ul>
         </fieldset>
-        <fieldset class="social">
-          <legend class="title social__title"><strong>6</strong> ¿Cómo reacciona tu perro con la gente?</legend>
-          <ul class="social__list">
-            <li class="social__item">
-              <label class="social__label" for="social__closer">
-                <figure class="social__figure"><img class="social__img" src="assets/img/6/acaricien-compressor.png" alt="Perro disfrutando de caricas">
-                  <figcaption class="social__caption">Le encanta que lo acaricien y que le den amor</figcaption>
+        <fieldset class="fieldset size" id="size">
+          <h2 class="fieldset__h2">
+            <legend class="fieldset__legend">4</legend> ¿Cómo describirías físicamente a tu perro?
+          </h2>
+          <ul class="fieldset__ul">
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="size__fat-nor-thin">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/4/nigordoniflaco-compressor.png" alt="Ni gordo, ni flaco">
+                  <figcaption class="fieldset__caption">Ni gordo ni flaco, pero es chiquito y engorda fácilmente</figcaption>
                 </figure>
-                <input class="social__radio" type="radio" name="game" value="petting" id="social__petting">
+                <input class="fieldset__radio" type="radio" name="size" value="fat_nor_thin" id="size__fat-nor-thin">
               </label>
             </li>
-            <li class="social__item">
-              <label class="social__label" for="social__playful">
-                <figure class="social__figure"><img class="social__img" src="assets/img/6/nuevas-compressor.png" alt="Perro jugando con pelota">
-                  <figcaption class="social__caption">¡Nuevas personas!<br />¡Más amigos con quién jugar!</figcaption>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="size__thin">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/4/delgado-compressor.png" alt="Delgado">
+                  <figcaption class="fieldset__caption">Creo que esta bajo de pero, se notan sus costillas</figcaption>
                 </figure>
-                <input class="social__radio" type="radio" name="game" value="new" id="social__new">
+                <input class="fieldset__radio" type="radio" name="size" value="thin" id="size__thin">
               </label>
             </li>
-            <li class="social__item">
-              <label class="social__label" for="social__hideaway">
-                <figure class="social__figure"><img class="social__img" src="assets/img/6/ladra-compressor.png" alt="Perro oliendo una mano">
-                  <figcaption class="social__caption">Les ladra, los huele para conocerlos y al final los acepta</figcaption>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="size__muscular">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/4/musculos-compressor.png" alt="Músculos">
+                  <figcaption class="fieldset__caption">Sus músculos no se ven ni se sientes fuertes, no están tan marcados</figcaption>
                 </figure>
-                <input class="social__radio" type="radio" name="game" value="bark" id="social__bark">
+                <input class="fieldset__radio" type="radio" name="size" value="muscular" id="size__muscular">
               </label>
             </li>
-            <li class="social__item">
-              <label class="social__label" for="social__watch">
-                <figure class="social__figure"><img class="social__img" src="assets/img/6/todos-compressor.png" alt="Perro dando la pata">
-                  <figcaption class="social__caption">Ni le va ni le viene, todos sirven para darle de comer y pasearlo</figcaption>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="size__overweight">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/4/sobrepeso-compressor.png" alt="Sobrepeso">
+                  <figcaption class="fieldset__caption">Está pasado de peso y le cuesta mucho bajar de peso</figcaption>
                 </figure>
-                <input class="social__radio" type="radio" name="game" value="all" id="social__all">
+                <input class="fieldset__radio" type="radio" name="size" value="overweight" id="size__overweight">
               </label>
             </li>
           </ul>
-          <ul class="buttons size__buttons">
-            <button class="button size__cancel--active">Cancelar</button>
-            <button class="button size__next--inactive">Siguiente</button>
+          <ul class="fieldset__buttons">
+            <button class="button fieldset__cancel--active"></button>
+            <button class="button fieldset__next--inactive"></button>
           </ul>
         </fieldset>
-        <fieldset class="care">
-          <legend class="title care__title"><strong>7</strong> ¿Qué es lo que más cuidas de tu perro?</legend>
-          <ul class="care__list">
-            <li class="care__item">
-              <label class="care__label" for="care__fat-nor-thin">
-                <figure class="care__figure"><img class="care__img" src="assets/img/7/pelo-compressor.png" alt="Perro siendo cepillado">
-                  <figcaption class="care__caption">Me gustaría acariciarlo y cargarlo sin que tire tanto pelo</figcaption>
+        <fieldset class="fieldset game" id="game">
+          <h2 class="fieldset__h2">
+            <legend class="fieldset__legend">5</legend> ¿Qué es lo que más cuidas de tu perro?
+          </h2>
+          <ul class="fieldset__ul">
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="game__closer">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/5/cerca-compressor.png" alt="Perro cerca de su dueño">
+                  <figcaption class="fieldset__caption">No es mucho de jugar, prefiere estar cerca de mí</figcaption>
                 </figure>
-                <input class="care__radio" type="radio" name="size" value="fat_nor_thin" id="care__fat-nor-thin">
+                <input class="fieldset__radio" type="radio" name="game" value="closer" id="game__closer">
               </label>
             </li>
-            <li class="care__item">
-              <label class="care__label" for="care__thin">
-                <figure class="care__figure"><img class="care__img" src="assets/img/7/nutrido-compressor.png" alt="Perro bien nutrido">
-                  <figcaption class="care__caption">Creo que necesita verse mejor nutrido o más saludable</figcaption>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="game__playful">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/5/zapatos-compressor.png" alt="Cachorro mordiendo un zapato">
+                  <figcaption class="fieldset__caption">La pelota, mis zapatos, todo es un juguete para él</figcaption>
                 </figure>
-                <input class="care__radio" type="radio" name="size" value="thin" id="care__thin">
+                <input class="fieldset__radio" type="radio" name="game" value="playful" id="game__playful">
               </label>
             </li>
-            <li class="care__item">
-              <label class="care__label" for="care__muscular">
-                <figure class="care__figure"><img class="care__img" src="assets/img/7/bano-compressor.png" alt="Perro haciendo del baño">
-                  <figcaption class="care__caption">A veces le cuesta trabajo ir al baño, debo mejorar su digestión</figcaption>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="game__hideaway">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/5/escondite-compressor.png" alt="Perro descubriendo un escondite">
+                  <figcaption class="fieldset__caption">Le escondo juguetes en la casa y él los encuentra</figcaption>
                 </figure>
-                <input class="care__radio" type="radio" name="size" value="muscular" id="care__muscular">
+                <input class="fieldset__radio" type="radio" name="game" value="hideaway" id="game__hideaway">
               </label>
             </li>
-            <li class="care__item">
-              <label class="care__label" for="care__overweight">
-                <figure class="care__figure"><img class="care__img" src="assets/img/7/energia-compressor.png" alt="Perro perezoso">
-                  <figcaption class="care__caption">Quiero que baje de peso pero le falta energía para hacer más ejercicio</figcaption>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="game__watch">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/5/viendo-compressor.png" alt="Perro viendo a tu amo">
+                  <figcaption class="fieldset__caption">Solo se me queda viendo cuando le aviento un juguete</figcaption>
                 </figure>
-                <input class="care__radio" type="radio" name="size" value="overweight" id="size__overweight">
+                <input class="fieldset__radio" type="radio" name="game" value="watch" id="game__watch">
               </label>
             </li>
           </ul>
-          <ul class="buttons size__buttons">
-            <button class="button size__cancel--active">Cancelar</button>
-            <button class="button size__next--inactive">Siguiente</button>
+          <ul class="fieldset__buttons">
+            <button class="button fieldset__cancel--active"></button>
+            <button class="button fieldset__next--inactive"></button>
+          </ul>
+        </fieldset>
+        <fieldset class="fieldset social" id="social">
+          <h2 class="fieldset__h2">
+            <legend class="fieldset__legend">6</legend> ¿Cómo reacciona tu perro con la gente?
+          </h2>
+          <ul class="fieldset__ul">
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="social__closer">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/6/acaricien-compressor.png" alt="Perro disfrutando de caricas">
+                  <figcaption class="fieldset__caption">Le encanta que lo acaricien y que le den amor</figcaption>
+                </figure>
+                <input class="fieldset__radio" type="radio" name="game" value="petting" id="social__petting">
+              </label>
+            </li>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="social__playful">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/6/nuevas-compressor.png" alt="Perro jugando con pelota">
+                  <figcaption class="fieldset__caption">¡Nuevas personas!<br />¡Más amigos con quién jugar!</figcaption>
+                </figure>
+                <input class="fieldset__radio" type="radio" name="game" value="new" id="social__new">
+              </label>
+            </li>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="social__hideaway">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/6/ladra-compressor.png" alt="Perro oliendo una mano">
+                  <figcaption class="fieldset__caption">Les ladra, los huele para conocerlos y al final los acepta</figcaption>
+                </figure>
+                <input class="fieldset__radio" type="radio" name="game" value="bark" id="social__bark">
+              </label>
+            </li>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="social__watch">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/6/todos-compressor.png" alt="Perro dando la pata">
+                  <figcaption class="fieldset__caption">Ni le va ni le viene, todos sirven para darle de comer y pasearlo</figcaption>
+                </figure>
+                <input class="fieldset__radio" type="radio" name="game" value="all" id="social__all">
+              </label>
+            </li>
+          </ul>
+          <ul class="fieldset__buttons">
+            <button class="button fieldset__cancel--active"></button>
+            <button class="button fieldset__next--inactive"></button>
+          </ul>
+        </fieldset>
+        <fieldset class="fieldset care" id="care">
+          <h2 class="fieldset__h2">
+            <legend class="fieldset__legend">7</legend> ¿Qué es lo que más cuidas de tu perro?
+          </h2>
+          <ul class="fieldset__ul">
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="care__fat-nor-thin">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/7/pelo-compressor.png" alt="Perro siendo cepillado">
+                  <figcaption class="fieldset__caption">Me gustaría acariciarlo y cargarlo sin que tire tanto pelo</figcaption>
+                </figure>
+                <input class="fieldset__radio" type="radio" name="size" value="fat_nor_thin" id="care__fat-nor-thin">
+              </label>
+            </li>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="care__thin">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/7/nutrido-compressor.png" alt="Perro bien nutrido">
+                  <figcaption class="fieldset__caption">Creo que necesita verse mejor nutrido o más saludable</figcaption>
+                </figure>
+                <input class="fieldset__radio" type="radio" name="size" value="thin" id="care__thin">
+              </label>
+            </li>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="care__muscular">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/7/bano-compressor.png" alt="Perro haciendo del baño">
+                  <figcaption class="fieldset__caption">A veces le cuesta trabajo ir al baño, debo mejorar su digestión</figcaption>
+                </figure>
+                <input class="fieldset__radio" type="radio" name="size" value="muscular" id="care__muscular">
+              </label>
+            </li>
+            <li class="fieldset__li">
+              <label class="fieldset__label" for="care__overweight">
+                <figure class="fieldset__figure"><img class="fieldset__img" src="assets/img/7/energia-compressor.png" alt="Perro perezoso">
+                  <figcaption class="fieldset__caption">Quiero que baje de peso pero le falta energía para hacer más ejercicio</figcaption>
+                </figure>
+                <input class="fieldset__radio" type="radio" name="size" value="overweight" id="size__overweight">
+              </label>
+            </li>
+          </ul>
+          <ul class="fieldset__buttons">
+            <button class="button fieldset__cancel--active"></button>
+            <button class="button fieldset__next--inactive"></button>
           </ul>
         </fieldset>
       </form>
-      <section class="results">
-        <h2 class="results__title">Resultado</h2>
+      <section class="results" id="results">
+        <h3 class="title results__h3">Resultado</h3>
         <article class="results__wrapper">
-          <div class="left"><img class="dog results__img" src="assets/img/Resultados/cierre_consentido.png" alt="Perro en una cama"></div>
-          <div class="right">
-            <h3 class="results__subtitle">Tu perro es un consentido</h3>
-            <p class="results__description">
+          <div class="results__div--left"><img class="dog results__img" src="assets/img/Resultados/cierre_consentido.png" alt="Perro en una cama"></div>
+          <div class="results__div--right">
+            <h3 class="results__h3">Tu perro es un consentido</h3>
+            <p class="results__p">
               Tu perro es un consentido: es tierno y
               chiquito, busca compañía todo el tiempo y
               es muy amigable aunque a veces se puede
@@ -344,31 +358,29 @@
               perro cae bien porque a la gente le gusta
               acariciarlo y decirle lo guapo que está.
             </p>
-            <p class="results__description">
+            <p class="results__p">
               Aliméntalo con IAMS Cachorro que le
               brindará los nutrientes que necesitan, como
               los minerales esenciales para fortalecer sus
               huesos y DHA (Omega 3) para cachorros
               más inteligentes y fáciles de entrenar.
             </p>
-            <div class="results__product"><img class="product results__img--product" src="assets/img/Resultados/AlimentoCachorro.png" alt="Alimento para cachorro"></div>
-          </div>
-          <button class="results__clear">Repetir test</button>
+            <div class="results__div"><img class="product results__img" src="assets/img/Resultados/AlimentoCachorro.png" alt="Alimento para cachorro"></div>
+          </div><a class="button results__clear" href="index.html" title="Repetir test">Repetir test</a>
         </article>
       </section>
-      <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-      <script>window.jQuery || document.write( '<script src="assets/js/vendor/jquery-1.12.0.min.js"><\/script>' )</script>
-      <script src="assets/js/plugins.js"></script>
-      <script src="assets/js/main.js"></script>
-      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
-      <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='https://www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-      </script>
     </main>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>window.jQuery || document.write( '<script src="assets/js/vendor/jquery-1.12.0.min.js"><\/script>' )</script>
+    <script src="assets/js/main.min.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+    </script>
   </body>
 </html>

@@ -1,34 +1,34 @@
-fieldset.care
-  legend.title.care__title <strong>7</strong> ¿Qué es lo que más cuidas de tu perro?
-  ul.care__list
-    li.care__item
-      label(for="care__fat-nor-thin").care__label
-        figure.care__figure
-          img(src="assets/img/7/pelo-compressor.png", alt="Perro siendo cepillado").care__img
-          figcaption.care__caption.
+fieldset.fieldset.care#care
+  h2.fieldset__h2 #[legend.fieldset__legend 7] ¿Qué es lo que más cuidas de tu perro?
+  ul.fieldset__ul
+    li.fieldset__li
+      label(for="care__fat-nor-thin").fieldset__label
+        figure.fieldset__figure
+          img(src="assets/img/7/pelo-compressor.png", alt="Perro siendo cepillado").fieldset__img
+          figcaption.fieldset__caption.
             Me gustaría acariciarlo y cargarlo sin que tire tanto pelo
-        input(type="radio", name="size", value="fat_nor_thin").care__radio#care__fat-nor-thin
-    li.care__item
-      label(for="care__thin").care__label
-        figure.care__figure
-          img(src="assets/img/7/nutrido-compressor.png", alt="Perro bien nutrido").care__img
-          figcaption.care__caption.
+        input(type="radio", name="size", value="fat_nor_thin").fieldset__radio#care__fat-nor-thin
+    li.fieldset__li
+      label(for="care__thin").fieldset__label
+        figure.fieldset__figure
+          img(src="assets/img/7/nutrido-compressor.png", alt="Perro bien nutrido").fieldset__img
+          figcaption.fieldset__caption.
             Creo que necesita verse mejor nutrido o más saludable
-        input(type="radio", name="size", value="thin").care__radio#care__thin
-    li.care__item
-      label(for="care__muscular").care__label
-        figure.care__figure
-          img(src="assets/img/7/bano-compressor.png", alt="Perro haciendo del baño").care__img
-          figcaption.care__caption.
+        input(type="radio", name="size", value="thin").fieldset__radio#care__thin
+    li.fieldset__li
+      label(for="care__muscular").fieldset__label
+        figure.fieldset__figure
+          img(src="assets/img/7/bano-compressor.png", alt="Perro haciendo del baño").fieldset__img
+          figcaption.fieldset__caption.
             A veces le cuesta trabajo ir al baño, debo mejorar su digestión
-        input(type="radio", name="size", value="muscular").care__radio#care__muscular
-    li.care__item
-      label(for="care__overweight").care__label
-        figure.care__figure
-          img(src="assets/img/7/energia-compressor.png", alt="Perro perezoso").care__img
-          figcaption.care__caption.
+        input(type="radio", name="size", value="muscular").fieldset__radio#care__muscular
+    li.fieldset__li
+      label(for="care__overweight").fieldset__label
+        figure.fieldset__figure
+          img(src="assets/img/7/energia-compressor.png", alt="Perro perezoso").fieldset__img
+          figcaption.fieldset__caption.
             Quiero que baje de peso pero le falta energía para hacer más ejercicio
-        input(type="radio", name="size", value="overweight").care__radio#size__overweight
-  ul.buttons.size__buttons
-    button.button.size__cancel--active Cancelar
-    button.button.size__next--inactive Siguiente
+        input(type="radio", name="size", value="overweight").fieldset__radio#size__overweight
+  ul.fieldset__buttons
+    button.button.fieldset__cancel--active
+    button.button.fieldset__next--inactive

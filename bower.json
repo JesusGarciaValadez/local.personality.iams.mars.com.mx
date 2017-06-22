@@ -34,7 +34,7 @@
   "private": true,
   "dependencies": {
     "html5-boilerplate": "^5.3.0",
-    "normalize-css": "^7.0.0",
+    "normalize-css": "normalize.css#^7.0.0",
     "bootstrap": "bootstrap-3.2#^3.3.7",
     "animate.css": "*",
     "vue": "^2.3.4",

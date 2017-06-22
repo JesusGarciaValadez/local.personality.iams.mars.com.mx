@@ -1,11 +1,14 @@
 extends layout/layout.pug
 
 block content
-  section.intro
-    img(src="assets/img/pleca-test.png", alt="Test").intro__img
-    h1.title.intro__title Descubre la <strong>personalidad de tu perro</strong>
-    a(href="" title="COMENZAR").button.intro__button Comenzar
-  form(action="", method="POST").personality
+  section.section
+    div.section__div
+      img(src="assets/img/pleca-test.png", alt="Test").section__img
+      img(src="assets/img/logoIAMS.svg", alt="IAMS").section__img-logo
+      h1.section__h1.
+        Descubre la <br />#[strong.section__strong personalidad] <br />#[span.section__span de tu perro]
+      a(href="#" title="COMENZAR").button.section__a Comenzar
+  form(action="action.php", method="POST").form
     include personality-test/step-one.pug
     include personality-test/step-two.pug
     include personality-test/step-three.pug

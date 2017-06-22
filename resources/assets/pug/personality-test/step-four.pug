@@ -1,34 +1,34 @@
-fieldset.size
-  legend.title.size__title <strong>4</strong> ¿Cómo describirías físicamente a tu perro?
-  ul.size__list
-    li.size__item
-      label(for="size__fat-nor-thin").size__label
-        figure.size__figure
-          img(src="assets/img/4/nigordoniflaco-compressor.png", alt="Ni gordo, ni flaco").size__img
-          figcaption.size__caption.
+fieldset.fieldset.size#size
+  h2.fieldset__h2 #[legend.fieldset__legend 4] ¿Cómo describirías físicamente a tu perro?
+  ul.fieldset__ul
+    li.fieldset__li
+      label(for="size__fat-nor-thin").fieldset__label
+        figure.fieldset__figure
+          img(src="assets/img/4/nigordoniflaco-compressor.png", alt="Ni gordo, ni flaco").fieldset__img
+          figcaption.fieldset__caption.
             Ni gordo ni flaco, pero es chiquito y engorda fácilmente
-        input(type="radio", name="size", value="fat_nor_thin").size__radio#size__fat-nor-thin
-    li.size__item
-      label(for="size__thin").size__label
-        figure.size__figure
-          img(src="assets/img/4/delgado-compressor.png", alt="Delgado").size__img
-          figcaption.size__caption.
+        input(type="radio", name="size", value="fat_nor_thin").fieldset__radio#size__fat-nor-thin
+    li.fieldset__li
+      label(for="size__thin").fieldset__label
+        figure.fieldset__figure
+          img(src="assets/img/4/delgado-compressor.png", alt="Delgado").fieldset__img
+          figcaption.fieldset__caption.
             Creo que esta bajo de pero, se notan sus costillas
-        input(type="radio", name="size", value="thin").size__radio#size__thin
-    li.size__item
-      label(for="size__muscular").size__label
-        figure.size__figure
-          img(src="assets/img/4/musculos-compressor.png", alt="Músculos").size__img
-          figcaption.size__caption.
+        input(type="radio", name="size", value="thin").fieldset__radio#size__thin
+    li.fieldset__li
+      label(for="size__muscular").fieldset__label
+        figure.fieldset__figure
+          img(src="assets/img/4/musculos-compressor.png", alt="Músculos").fieldset__img
+          figcaption.fieldset__caption.
             Sus músculos no se ven ni se sientes fuertes, no están tan marcados
-        input(type="radio", name="size", value="muscular").size__radio#size__muscular
-    li.size__item
-      label(for="size__overweight").size__label
-        figure.size__figure
-          img(src="assets/img/4/sobrepeso-compressor.png", alt="Sobrepeso").size__img
-          figcaption.size__caption.
+        input(type="radio", name="size", value="muscular").fieldset__radio#size__muscular
+    li.fieldset__li
+      label(for="size__overweight").fieldset__label
+        figure.fieldset__figure
+          img(src="assets/img/4/sobrepeso-compressor.png", alt="Sobrepeso").fieldset__img
+          figcaption.fieldset__caption.
             Está pasado de peso y le cuesta mucho bajar de peso
-        input(type="radio", name="size", value="overweight").size__radio#size__overweight
-  ul.buttons.size__buttons
-    button.button.size__cancel--active Cancelar
-    button.button.size__next--inactive Siguiente
+        input(type="radio", name="size", value="overweight").fieldset__radio#size__overweight
+  ul.fieldset__buttons
+    button.button.fieldset__cancel--active
+    button.button.fieldset__next--inactive

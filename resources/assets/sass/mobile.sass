@@ -1,0 +1,125 @@
+html, body, main
+  background-color: $background-color
+  display: table
+  height: 100%
+  overflow: hidden
+  position: relative
+  width: 100%
+.button
+  border-radius: 1.25em
+  font-weight: bold
+  padding: 1.1764705882em 2.0588235294em
+  text-align: center
+  text-decoration: none
+  text-transform: uppercase
+.header
+  background-color: $header-color
+  display: table
+  height: 7%
+  position: relative
+  width: 100%
+  z-index: 10
+  .header__img
+    width: 6.25em
+    margin: 0.625em 1.25em
+  .header__nav
+  .header__nav--active
+    display: block
+  .header__nav--inactive
+    display: none
+.section, .form, .results
+  display: table
+  height: 93%
+  position: relative
+  width: 100%
+.section
+  background: url( "../img/background.png" ) 40% bottom transparent
+  background-size: auto 100%
+  z-index: 0
+  .section__div
+  .section__img
+    position: absolute
+    top: 1%
+    right: 0
+    width: 40%
+  .section__img-logo
+    display: block;
+    margin: 75px auto 0.625em
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.7)
+    width: 35%;
+  .section__h1
+    color: $mobile-section__h1-color
+    font: 300 1.25em/1.2em $Gotham-Light
+    font-size: 1.25em
+    font-weight: normal
+    text-align: center
+    text-transform: uppercase
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.7)
+    .section__strong
+      font-family: $Gotham-Bold
+      letter-spacing: 0.1px
+    .section__span
+      font-family: $Gotham-Book
+      font-weight: 500
+  .section__a
+    background-color: $button-background-color
+    color: $button-color
+    font: normal 1em/1.2em $Gotham-Bold
+    display: inline-block
+    margin: 0 auto
+    position: relative
+    left: 50%
+    transform: translate( -50%, 0 )
+    &:hover
+      background-color: $button--hover-background-color
+.form
+  background-color: $fieldset-background-color
+  right: 0
+  padding: 13% 0 0
+  position: absolute
+  top: 0
+  z-index: 1
+  .fieldset
+    &:target
+    .fieldset__h2
+      color: $fieldset__legend-color
+      font-family: $Gotham-Bold
+      font-size: 0.8235294118em // 14px
+      line-height: 3.5714285714em // 50px
+      margin: 2.1428571429em 0 // 30px 0
+      text-transform: uppercase
+      width: 100%
+      .fieldset__legend
+        color: $fieldset__strong-color
+        display: inline
+        float: left
+        font-size: 4.3333333333em // 65px
+        margin: 0 0.3076923077em 0 0.3846153846em // 25px
+    .fieldset__ul
+      display: flex
+      margin: 0
+      padding: 0
+      width: 100%
+      .fieldset__li
+        width: 35%
+        .fieldset__label
+          .fieldset__figure
+            .fieldset__img
+            .fieldset__caption
+          .fieldset__radio
+    .fieldset__buttons
+      .button.fieldset__cancel--active
+      .button.fieldset__next--inactive
+.results
+  display: none
+  z-index: 3
+  .title.results__h3
+  .results__wrapper
+    .results__div--left
+      .dog.results__img
+    .results__div--right
+      .results__h3
+      .results__p
+      .results__div
+        .product.results__img
+    .button.results__clear
