@@ -191,7 +191,6 @@ html, body, main {
   background-color: #F7F6F3;
   display: table;
   height: 100%;
-  overflow: hidden;
   position: relative;
   width: 100%; }
 
@@ -211,7 +210,7 @@ html, body, main {
   width: 100%;
   z-index: 10; }
   .header .header__img {
-    width: 6.25em;
+    width: 30%;
     margin: 0.625em 1.25em; }
   .header .header__nav--active {
     display: block; }
@@ -220,7 +219,7 @@ html, body, main {
 
 .section, .form, .results {
   display: table;
-  height: 93%;
+  height: auto;
   position: relative;
   width: 100%; }
 
@@ -267,38 +266,195 @@ html, body, main {
 
 .form {
   background-color: #F7F6F3;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  height: 102vh;
   right: 0;
   padding: 13% 0 0;
   position: absolute;
   top: 0;
   z-index: 1; }
-  .form .fieldset .fieldset__h2 {
-    color: #333333;
-    font-family: "GothamBold";
-    font-size: 0.8235294118em;
-    line-height: 3.5714285714em;
-    margin: 2.1428571429em 0;
-    text-transform: uppercase;
-    width: 100%; }
-    .form .fieldset .fieldset__h2 .fieldset__legend {
-      color: #E0DED8;
-      display: inline;
-      float: left;
-      font-size: 4.3333333333em;
-      margin: 0 0.3076923077em 0 0.3846153846em; }
-  .form .fieldset .fieldset__ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    width: 100%; }
-    .form .fieldset .fieldset__ul .fieldset__li {
-      width: 35%; }
+  .form .fieldset {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 100%;
+    padding-bottom: 16%; }
+    .form .fieldset .fieldset__h2 {
+      box-sizing: border-box;
+      color: #333333;
+      font-family: "GothamBold";
+      font-size: 0.8235294118em;
+      line-height: 1.5em;
+      margin: 2.8571428571em 0 1.4285714286em;
+      padding: 0 2.1em 0 5em;
+      position: relative;
+      text-transform: uppercase;
+      width: 100vw; }
+      .form .fieldset .fieldset__h2 .fieldset__legend {
+        color: #E0DED8;
+        display: inline;
+        float: left;
+        font-size: 4.3333333333em;
+        left: 5%;
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%); }
+    .form .fieldset .fieldset__ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
+      margin: 0 auto;
+      padding: 0;
+      width: 80%; }
+      .form .fieldset .fieldset__ul .fieldset__li {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        margin: 4%;
+        width: 45%; }
+        .form .fieldset .fieldset__ul .fieldset__li:nth-child(even) {
+          margin-right: 0; }
+        .form .fieldset .fieldset__ul .fieldset__li:nth-child(odd) {
+          margin-left: 0; }
+        .form .fieldset .fieldset__ul .fieldset__li .fieldset__label {
+          display: block;
+          position: relative;
+          width: 100%; }
+          .form .fieldset .fieldset__ul .fieldset__li .fieldset__label .fieldset__figure {
+            display: block;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            width: 100%;
+            z-index: 0; }
+            .form .fieldset .fieldset__ul .fieldset__li .fieldset__label .fieldset__figure .fieldset__img {
+              width: 100%; }
+            .form .fieldset .fieldset__ul .fieldset__li .fieldset__label .fieldset__figure .fieldset__caption {
+              background-color: #009C49;
+              color: #FFFFFF;
+              display: block;
+              font: normal 10px/1.2em "GothamLight";
+              text-align: left;
+              padding: 15px 10px; }
+          .form .fieldset .fieldset__ul .fieldset__li .fieldset__label .fieldset__radio {
+            display: block;
+            height: 100%;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1; }
+      .form .fieldset .fieldset__ul .fieldset__li--active {
+        border-radius: 5px;
+        border: 2px solid #FCB62C;
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+        overflow: hidden; }
+    .form .fieldset .fieldset__buttons {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
+      margin: 0;
+      padding: 0; }
+      .form .fieldset .fieldset__buttons .button {
+        align-seld: center;
+        border: 0 none transparent;
+        border-radius: 15px;
+        font: normal 11px/0 "GothamBold";
+        margin-top: 1%;
+        padding: 20px 25px;
+        width: 37%; }
+        .form .fieldset .fieldset__buttons .button:nth-child(odd) {
+          margin-left: 10%;
+          margin-right: 2.5%; }
+        .form .fieldset .fieldset__buttons .button:nth-child(even) {
+          margin-right: 10%;
+          margin-left: 2.5%; }
+      .form .fieldset .fieldset__buttons .fieldset__cancel--active {
+        background-color: transparent;
+        border: 2px solid #76C7A0;
+        color: #76C7A0; }
+      .form .fieldset .fieldset__buttons .fieldset__next--inactive {
+        background-color: #DADBDB;
+        color: #FFFFFF; }
+      .form .fieldset .fieldset__buttons .fieldset__next--active {
+        background-color: #009B43; }
+  .form .fieldset--intro .fieldset__ul .fieldset__li .fieldset__label .fieldset__figure .fieldset__caption {
+    font: bold 13px/1.2em "GothamBold";
+    text-align: center; }
 
 .results {
   display: none;
   z-index: 3; }
+
+.footer__nav {
+  background-color: #009B43;
+  bottom: 0;
+  display: table;
+  height: 7%;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10; }
+  .footer__nav .footer__ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%; }
+    .footer__nav .footer__ul .footer__li, .footer__nav .footer__ul .footer__li--active {
+      box-sizing: border-box;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
+      height: 100%;
+      width: 12.5%; }
+    .footer__nav .footer__ul .footer__li {
+      background-color: #008A42; }
+      .footer__nav .footer__ul .footer__li .footer__p {
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+        color: #006539;
+        display: inline-block;
+        font: normal 11px/1.5em "GothamBold";
+        margin: 0;
+        padding-left: 18px;
+        text-transform: uppercase; }
+        .footer__nav .footer__ul .footer__li .footer__p .footer__a {
+          color: inherit;
+          text-decoration: none; }
+    .footer__nav .footer__ul .footer__li--active {
+      background-color: transparent;
+      border-right: 1px solid;
+      border: 0 none transparent; }
+      .footer__nav .footer__ul .footer__li--active .footer__p {
+        color: #FFFFFF; }
 
 /* ==========================================================================
  Helper classes
@@ -468,7 +624,9 @@ html, body, main {
     display: none;
     left: 0;
     position: absolute;
-    top: 0; } }
+    top: 0; }
+  html .results .footer, body .results .footer, main .results .footer {
+    display: none; } }
 
 /* ==========================================================================
    Print styles.

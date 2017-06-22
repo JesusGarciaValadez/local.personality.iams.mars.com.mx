@@ -2,7 +2,6 @@ html, body, main
   background-color: $background-color
   display: table
   height: 100%
-  overflow: hidden
   position: relative
   width: 100%
 .button
@@ -20,7 +19,7 @@ html, body, main
   width: 100%
   z-index: 10
   .header__img
-    width: 6.25em
+    width: 30% // 6.25em
     margin: 0.625em 1.25em
   .header__nav
   .header__nav--active
@@ -29,7 +28,7 @@ html, body, main
     display: none
 .section, .form, .results
   display: table
-  height: 93%
+  height: auto
   position: relative
   width: 100%
 .section
@@ -74,42 +73,124 @@ html, body, main
       background-color: $button--hover-background-color
 .form
   background-color: $fieldset-background-color
+  box-sizing: border-box
+  display: inline-flex
+  flex-flow: row nowrap
+  height: 102vh
   right: 0
   padding: 13% 0 0
   position: absolute
   top: 0
   z-index: 1
   .fieldset
-    &:target
+    box-sizing: border-box
+    display: inline-block
+    height: 100%
+    padding-bottom: 16%
     .fieldset__h2
+      box-sizing: border-box
       color: $fieldset__legend-color
       font-family: $Gotham-Bold
       font-size: 0.8235294118em // 14px
-      line-height: 3.5714285714em // 50px
-      margin: 2.1428571429em 0 // 30px 0
+      line-height: 1.5em
+      margin: 2.8571428571em 0 1.4285714286em // 40px 0 30px
+      padding: 0 2.1em 0 5em // 0 29.4px 0 70px
+      position: relative
       text-transform: uppercase
-      width: 100%
+      width: 100vw
       .fieldset__legend
         color: $fieldset__strong-color
         display: inline
         float: left
         font-size: 4.3333333333em // 65px
-        margin: 0 0.3076923077em 0 0.3846153846em // 25px
+        left: 5%
+        position: absolute
+        top: 50%
+        transform: translate( 0, -50% )
     .fieldset__ul
       display: flex
+      flex-flow: row wrap
+      margin: 0 auto
+      padding: 0
+      width: 80%
+      .fieldset__li
+        display: inline-flex
+        margin: 4%
+        width: 45%
+        &:nth-child( even )
+          margin-right: 0
+        &:nth-child( odd )
+          margin-left: 0
+        .fieldset__label
+          display: block
+          position: relative
+          width: 100%
+          .fieldset__figure
+            display: block
+            margin: 0
+            padding: 0
+            position: relative
+            width: 100%
+            z-index: 0
+            .fieldset__img
+              width: 100%
+            .fieldset__caption
+              background-color: $fieldset__figcaption-background-color
+              color: $fieldset__figcaption-color
+              display: block
+              font: normal 10px/1.2em $Gotham-Light
+              text-align: left
+              padding: 15px 10px
+          .fieldset__radio
+            display: block
+            height: 100%
+            left: 0
+            opacity: 0
+            position: absolute
+            top: 0
+            width: 100%
+            z-index: 1
+      .fieldset__li--active
+        border-radius: 5px
+        border: 2px solid $fieldset__li-border-color
+        box-shadow: 5px 5px 10px 0 rgba( 0, 0, 0, 0.5 )
+        overflow: hidden
+    .fieldset__buttons
+      display: flex
+      flex-flow: row nowrap
       margin: 0
       padding: 0
-      width: 100%
+      .button
+        align-seld: center
+        border: 0 none transparent
+        border-radius: 15px
+        font: normal 11px/0 $Gotham-Bold
+        margin-top: 1%
+        padding: 20px 25px
+        width: 37%
+        &:nth-child( odd )
+          margin-left: 10%
+          margin-right: 2.5%
+        &:nth-child( even )
+          margin-right: 10%
+          margin-left: 2.5%
+      .fieldset__cancel--active
+        background-color: transparent
+        border: 2px solid $fieldset__cancel--active-border-color
+        color: $fieldset__cancel--active-color
+      .fieldset__next--inactive
+        background-color: $fieldset__next--inactive-background-color
+        color: $fieldset__next--active-color
+      .fieldset__next--active
+        background-color: $fieldset__next--active-background-color
+  .fieldset--intro
+    .fieldset__ul
       .fieldset__li
-        width: 35%
         .fieldset__label
           .fieldset__figure
-            .fieldset__img
             .fieldset__caption
-          .fieldset__radio
-    .fieldset__buttons
-      .button.fieldset__cancel--active
-      .button.fieldset__next--inactive
+              font: bold 13px/1.2em $Gotham-Bold
+              text-align: center
 .results
   display: none
   z-index: 3
@@ -123,3 +204,45 @@ html, body, main
       .results__div
         .product.results__img
     .button.results__clear
+.footer__nav
+  background-color: $footer__nav-background-color
+  bottom: 0
+  display: table
+  height: 7%
+  left: 0
+  position: fixed
+  width: 100%
+  z-index: 10
+  .footer__ul
+    display: flex
+    flex-flow: row nowrap
+    height: 100%
+    margin: 0 auto
+    padding: 0
+    width: 100%
+    .footer__li, .footer__li--active
+      box-sizing: border-box
+      display: flex
+      flex-flow: row nowrap
+      height: 100%
+      width: 12.5%
+    .footer__li
+      background-color: $footer__li--inactive-color
+      .footer__p
+        align-self: center
+        color: $footer__p--inactive-color
+        display: inline-block
+        font: normal 11px/1.5em $Gotham-Bold
+        margin: 0
+        padding-left: 18px
+        text-transform: uppercase
+        .footer__a
+          color: inherit
+          text-decoration: none
+    .footer__li--active
+      background-color: transparent
+      border-right: 1px solid
+      border: 0 none transparent
+      .footer__p
+        color: $footer__p-color
+.footer__nav--inactive

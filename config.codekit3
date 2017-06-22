@@ -12076,12 +12076,6 @@
 		"oAP": "\/public\/assets\/public\/index.html",
 		"oF": 0
 		},
-	"\/public\/results.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/public\/assets\/public\/results.html",
-		"oF": 0
-		},
 	"\/resources\/assets\/img\/1\/grande-compressor.png": {
 		"ft": 32768,
 		"iS": 14523,
@@ -12530,6 +12524,14 @@
 		"oF": 2,
 		"oS": 0
 		},
+	"\/resources\/assets\/pug\/layout\/footer.pug": {
+		"cOD": 1,
+		"ft": 512,
+		"oA": 1,
+		"oAP": "\/public\/assets\/footer.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/resources\/assets\/pug\/layout\/head.pug": {
 		"cOD": 1,
 		"ft": 512,
@@ -12626,13 +12628,18 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"\/resources\/assets\/pug\/results.pug": {
-		"cOD": 1,
-		"ft": 512,
-		"oA": 0,
-		"oAP": "\/public\/results.html",
-		"oF": 2,
-		"oS": 0
+	"\/resources\/assets\/sass\/__fonts.sass": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/public\/assets\/css\/__fonts.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"\/resources\/assets\/sass\/__variables.sass": {
 		"aP": 1,
