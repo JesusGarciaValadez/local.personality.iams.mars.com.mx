@@ -194,6 +194,9 @@ html, body, main {
   position: relative;
   width: 100%; }
 
+.main {
+  overflow: hidden; }
+
 .button {
   border-radius: 1.25em;
   font-weight: bold;
@@ -226,6 +229,7 @@ html, body, main {
 .section {
   background: url("../img/background.png") 40% bottom transparent;
   background-size: auto 100%;
+  height: 93%;
   z-index: 0; }
   .section .section__img {
     position: absolute;
@@ -267,22 +271,17 @@ html, body, main {
 .form {
   background-color: #F7F6F3;
   box-sizing: border-box;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   height: 102vh;
-  right: 0;
   padding: 13% 0 0;
   position: absolute;
   top: 0;
   z-index: 1; }
   .form .fieldset {
     box-sizing: border-box;
-    display: inline-block;
     height: 100%;
     padding-bottom: 16%; }
     .form .fieldset .fieldset__h2 {
@@ -322,7 +321,7 @@ html, body, main {
         display: -ms-inline-flexbox;
         display: inline-flex;
         margin: 4%;
-        width: 45%; }
+        width: 46%; }
         .form .fieldset .fieldset__ul .fieldset__li:nth-child(even) {
           margin-right: 0; }
         .form .fieldset .fieldset__ul .fieldset__li:nth-child(odd) {
@@ -360,6 +359,7 @@ html, body, main {
         border-radius: 5px;
         border: 2px solid #FCB62C;
         box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
         overflow: hidden; }
     .form .fieldset .fieldset__buttons {
       display: -webkit-box;
@@ -372,7 +372,9 @@ html, body, main {
       margin: 0;
       padding: 0; }
       .form .fieldset .fieldset__buttons .button {
-        align-seld: center;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
         border: 0 none transparent;
         border-radius: 15px;
         font: normal 11px/0 "GothamBold";
@@ -397,15 +399,86 @@ html, body, main {
   .form .fieldset--intro .fieldset__ul .fieldset__li .fieldset__label .fieldset__figure .fieldset__caption {
     font: bold 13px/1.2em "GothamBold";
     text-align: center; }
+  .form .fieldset--active {
+    display: inline-block; }
+  .form .fieldset--inactive {
+    display: none; }
+
+.form--active {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  right: 0vw;
+  transition: all 3s 5s ease; }
+
+.form--inactive {
+  display: none;
+  right: -100vw; }
 
 .results {
-  display: none;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  height: 102vh;
+  padding: 10% 8%;
+  position: absolute;
+  top: 0;
+  width: 100vw;
   z-index: 3; }
+  .results .results__h3 {
+    font: normal 20px/1.5em "GothamBold";
+    margin: 10% 0 3%;
+    text-transform: uppercase; }
+  .results .results__wrapper {
+    box-sizing: border-box; }
+    .results .results__wrapper .results__div--left {
+      width: 100%; }
+      .results .results__wrapper .results__div--left .dog.results__img {
+        width: 100%; }
+    .results .results__wrapper .results__div--right {
+      width: 100%; }
+      .results .results__wrapper .results__div--right .results__h3 {
+        font: normal 18px/1em "GothamBold";
+        margin: 5% 0 0;
+        text-transform: uppercase; }
+      .results .results__wrapper .results__div--right .results__p {
+        display: inline;
+        float: left;
+        font: normal 11px/1.2em "GothamLight";
+        margin: 3% 0 3% 5%;
+        width: 59%; }
+      .results .results__wrapper .results__div--right .product.results__img {
+        float: right;
+        margin: 45% 0 0;
+        padding: 0;
+        width: 30%; }
+    .results .results__wrapper .results__clear {
+      -ms-flex-item-align: center;
+          -ms-grid-row-align: center;
+          align-self: center;
+      background-color: #009B43;
+      border: 0 none transparent;
+      border-radius: 20px;
+      clear: both;
+      color: #FFFFFF;
+      display: block;
+      font: normal 11px/0 "GothamBold";
+      margin: 1% auto;
+      padding: 25px 15px;
+      width: 40%; }
+
+.results--inactive {
+  display: none; }
+
+.results--active {
+  display: block; }
 
 .footer__nav {
   background-color: #009B43;
   bottom: 0;
-  display: table;
   height: 7%;
   left: 0;
   position: fixed;
@@ -455,6 +528,12 @@ html, body, main {
       border: 0 none transparent; }
       .footer__nav .footer__ul .footer__li--active .footer__p {
         color: #FFFFFF; }
+
+.footer__nav--active {
+  display: table; }
+
+.footer__nav--inactive {
+  display: none; }
 
 /* ==========================================================================
  Helper classes
@@ -626,6 +705,8 @@ html, body, main {
     position: absolute;
     top: 0; }
   html .results .footer, body .results .footer, main .results .footer {
+    display: none; }
+  html .footer__nav, body .footer__nav, main .footer__nav {
     display: none; } }
 
 /* ==========================================================================

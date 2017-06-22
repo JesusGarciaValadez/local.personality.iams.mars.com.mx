@@ -56,8 +56,8 @@
           <h1 class="section__h1">Descubre la <br /><strong class="section__strong">personalidad</strong> <br /><span class="section__span">de tu perro</span></h1><a class="button section__a" href="#" title="COMENZAR">Comenzar</a>
         </div>
       </section>
-      <form class="form" action="action.php" method="POST">
-        <fieldset class="fieldset fieldset--intro height" id="height">
+      <form class="form form--inactive" action="action.php" method="POST">
+        <fieldset class="fieldset fieldset--intro fieldset--active height" id="height">
           <h2 class="fieldset__h2">
             <legend class="fieldset__legend">1</legend> ¿De qué tamaño es tu perro?
           </h2>
@@ -92,7 +92,7 @@
             <button class="button fieldset__next--inactive">Siguiente</button>
           </ul>
         </fieldset>
-        <fieldset class="fieldset fieldset--intro age" id="age">
+        <fieldset class="fieldset fieldset--intro fieldset--inactive age" id="age">
           <h2 class="fieldset__h2">
             <legend class="fieldset__legend">2</legend> Tu perro es…
           </h2>
@@ -127,7 +127,7 @@
             <button class="button fieldset__next--inactive">Siguiente</button>
           </ul>
         </fieldset>
-        <fieldset class="fieldset behavior" id="behavior">
+        <fieldset class="fieldset behavior fieldset--inactive" id="behavior">
           <h2 class="fieldset__h2">
             <legend class="fieldset__legend">3</legend> ¿Cuál de estos comportamientos describe mejor a tu perro?
           </h2>
@@ -170,7 +170,7 @@
             <button class="button fieldset__next--inactive">Siguiente</button>
           </ul>
         </fieldset>
-        <fieldset class="fieldset size" id="size">
+        <fieldset class="fieldset size fieldset--inactive" id="size">
           <h2 class="fieldset__h2">
             <legend class="fieldset__legend">4</legend> ¿Cómo describirías físicamente a tu perro?
           </h2>
@@ -213,7 +213,7 @@
             <button class="button fieldset__next--inactive">Siguiente</button>
           </ul>
         </fieldset>
-        <fieldset class="fieldset game" id="game">
+        <fieldset class="fieldset game fieldset--inactive" id="game">
           <h2 class="fieldset__h2">
             <legend class="fieldset__legend">5</legend> ¿Qué es lo que más cuidas de tu perro?
           </h2>
@@ -256,7 +256,7 @@
             <button class="button fieldset__next--inactive">Siguiente</button>
           </ul>
         </fieldset>
-        <fieldset class="fieldset social" id="social">
+        <fieldset class="fieldset social fieldset--inactive" id="social">
           <h2 class="fieldset__h2">
             <legend class="fieldset__legend">6</legend> ¿Cómo reacciona tu perro con la gente?
           </h2>
@@ -299,7 +299,7 @@
             <button class="button fieldset__next--inactive">Siguiente</button>
           </ul>
         </fieldset>
-        <fieldset class="fieldset care" id="care">
+        <fieldset class="fieldset care fieldset--inactive" id="care">
           <h2 class="fieldset__h2">
             <legend class="fieldset__legend">7</legend> ¿Qué es lo que más cuidas de tu perro?
           </h2>
@@ -343,7 +343,7 @@
           </ul>
         </fieldset>
       </form>
-      <section class="results" id="results">
+      <section class="results results--inactive" id="results">
         <h3 class="title results__h3">Resultado</h3>
         <article class="results__wrapper">
           <div class="results__div--left"><img class="dog results__img" src="assets/img/Resultados/cierre_consentido.png" alt="Perro en una cama"></div>
@@ -364,9 +364,9 @@
               los minerales esenciales para fortalecer sus
               huesos y DHA (Omega 3) para cachorros
               más inteligentes y fáciles de entrenar.
-            </p>
-            <div class="results__div"><img class="product results__img" src="assets/img/Resultados/AlimentoCachorro.png" alt="Alimento para cachorro"></div>
-          </div><a class="button results__clear" href="index.html" title="Repetir test">Repetir test</a>
+            </p><img class="product results__img" src="assets/img/Resultados/AlimentoCachorro.png" alt="Alimento para cachorro">
+          </div>
+          <p class="results__p"><a class="button results__clear" href="index.html" title="Repetir test">Repetir test</a></p>
         </article>
       </section>
       <nav class="footer__nav footer__nav--inactive">

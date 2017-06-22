@@ -4,6 +4,8 @@ html, body, main
   height: 100%
   position: relative
   width: 100%
+.main
+  overflow: hidden
 .button
   border-radius: 1.25em
   font-weight: bold
@@ -34,6 +36,7 @@ html, body, main
 .section
   background: url( "../img/background.png" ) 40% bottom transparent
   background-size: auto 100%
+  height: 93%
   z-index: 0
   .section__div
   .section__img
@@ -74,17 +77,14 @@ html, body, main
 .form
   background-color: $fieldset-background-color
   box-sizing: border-box
-  display: inline-flex
   flex-flow: row nowrap
   height: 102vh
-  right: 0
   padding: 13% 0 0
   position: absolute
   top: 0
   z-index: 1
   .fieldset
     box-sizing: border-box
-    display: inline-block
     height: 100%
     padding-bottom: 16%
     .fieldset__h2
@@ -116,7 +116,7 @@ html, body, main
       .fieldset__li
         display: inline-flex
         margin: 4%
-        width: 45%
+        width: 46%
         &:nth-child( even )
           margin-right: 0
         &:nth-child( odd )
@@ -154,6 +154,7 @@ html, body, main
         border-radius: 5px
         border: 2px solid $fieldset__li-border-color
         box-shadow: 5px 5px 10px 0 rgba( 0, 0, 0, 0.5 )
+        box-sizing: border-box
         overflow: hidden
     .fieldset__buttons
       display: flex
@@ -161,7 +162,7 @@ html, body, main
       margin: 0
       padding: 0
       .button
-        align-seld: center
+        align-self: center
         border: 0 none transparent
         border-radius: 15px
         font: normal 11px/0 $Gotham-Bold
@@ -191,23 +192,73 @@ html, body, main
             .fieldset__caption
               font: bold 13px/1.2em $Gotham-Bold
               text-align: center
-.results
+  .fieldset--active
+    display: inline-block
+  .fieldset--inactive
+    display: none
+.form--active
+  display: inline-flex
+  right: 0vw
+  transition: all 3s 5s ease
+.form--inactive
   display: none
+  right: -100vw
+.results
+  background-color: $result-background-color
+  box-sizing: border-box
+  flex-flow: row nowrap
+  height: 102vh
+  padding: 10% 8%
+  position: absolute
+  top: 0
+  width: 100vw
   z-index: 3
-  .title.results__h3
+  .results__h3
+    font: normal 20px/1.5em $Gotham-Bold
+    margin: 10% 0 3%
+    text-transform: uppercase
   .results__wrapper
+    box-sizing: border-box
     .results__div--left
+      width: 100%
       .dog.results__img
+        width: 100%
     .results__div--right
+      width: 100%
       .results__h3
+        font: normal 18px/1em $Gotham-Bold
+        margin: 5% 0 0
+        text-transform: uppercase
       .results__p
-      .results__div
-        .product.results__img
-    .button.results__clear
+        display: inline
+        float: left
+        font: normal 11px/1.2em $Gotham-Light
+        margin: 3% 0 3% 5%
+        width: 59%
+      .product.results__img
+        float: right
+        margin: 45% 0 0
+        padding: 0
+        width: 30%
+    .results__clear
+      align-self: center
+      background-color: $fieldset__next--active-background-color
+      border: 0 none transparent
+      border-radius: 20px
+      clear: both
+      color: $fieldset__next--active-color
+      display: block
+      font: normal 11px/0 $Gotham-Bold
+      margin: 1% auto
+      padding: 25px 15px
+      width: 40%
+.results--inactive
+  display: none
+.results--active
+  display: block
 .footer__nav
   background-color: $footer__nav-background-color
   bottom: 0
-  display: table
   height: 7%
   left: 0
   position: fixed
@@ -245,4 +296,7 @@ html, body, main
       border: 0 none transparent
       .footer__p
         color: $footer__p-color
+.footer__nav--active
+  display: table
 .footer__nav--inactive
+  display: none
