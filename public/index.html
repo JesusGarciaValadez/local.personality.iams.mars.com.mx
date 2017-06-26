@@ -21,7 +21,7 @@
   </head>
   <body>
     <main>
-      <header class="header"><img class="header__img" src="assets/img/logoIAMS.svg" alt="IAMS">
+      <header class="header"><a href="index.html" alt="IAMS"><img class="header__img" src="assets/img/logoIAMS.svg" alt="IAMS"></a>
         <nav class="header__nav header__nav--inactive">
           <ul class="header__ul">
             <li class="header__li header__li--active">
@@ -53,10 +53,11 @@
       </header>
       <section class="section">
         <div class="section__div"><img class="section__img" src="assets/img/pleca-test.png" alt="Test"><img class="section__img-logo" src="assets/img/logoIAMS.svg" alt="IAMS">
-          <h1 class="section__h1">Descubre la <br /><strong class="section__strong">personalidad</strong> <br /><span class="section__span">de tu perro</span></h1><a class="button section__a" href="#" title="COMENZAR">Comenzar</a>
+          <h1 class="section__h1">Descubre la <br /><strong class="section__strong">personalidad</strong> <br /><span class="section__span">de tu perro</span></h1>
+          <button class="button section__a" data-next="height" id="next-height">Comenzar</button>
         </div>
       </section>
-      <form class="form form--inactive" action="action.php" method="POST">
+      <form class="form" action="action.php" method="POST" id="form">
         <fieldset class="fieldset fieldset--intro fieldset--active height" id="height">
           <h2 class="fieldset__h2">
             <legend class="fieldset__legend">1</legend> ¿De qué tamaño es tu perro?
@@ -89,7 +90,7 @@
           </ul>
           <ul class="fieldset__buttons">
             <button class="button fieldset__cancel--active">Cancelar</button>
-            <button class="button fieldset__next--inactive">Siguiente</button>
+            <button class="button fieldset__next--inactive" data-next="age" id="next--age">Siguiente</button>
           </ul>
         </fieldset>
         <fieldset class="fieldset fieldset--intro fieldset--inactive age" id="age">
@@ -124,7 +125,7 @@
           </ul>
           <ul class="fieldset__buttons">
             <button class="button fieldset__cancel--active">Cancelar</button>
-            <button class="button fieldset__next--inactive">Siguiente</button>
+            <button class="button fieldset__next--inactive" data-next="behavior" id="next-behavior">Siguiente</button>
           </ul>
         </fieldset>
         <fieldset class="fieldset behavior fieldset--inactive" id="behavior">
@@ -167,7 +168,7 @@
           </ul>
           <ul class="fieldset__buttons">
             <button class="button fieldset__cancel--active">Cancelar</button>
-            <button class="button fieldset__next--inactive">Siguiente</button>
+            <button class="button fieldset__next--inactive" data-next="size" id="next-size">Siguiente</button>
           </ul>
         </fieldset>
         <fieldset class="fieldset size fieldset--inactive" id="size">
@@ -210,7 +211,7 @@
           </ul>
           <ul class="fieldset__buttons">
             <button class="button fieldset__cancel--active">Cancelar</button>
-            <button class="button fieldset__next--inactive">Siguiente</button>
+            <button class="button fieldset__next--inactive" data-next="game" id="next-game">Siguiente</button>
           </ul>
         </fieldset>
         <fieldset class="fieldset game fieldset--inactive" id="game">
@@ -253,7 +254,7 @@
           </ul>
           <ul class="fieldset__buttons">
             <button class="button fieldset__cancel--active">Cancelar</button>
-            <button class="button fieldset__next--inactive">Siguiente</button>
+            <button class="button fieldset__next--inactive" data-next="social" id="next-social">Siguiente</button>
           </ul>
         </fieldset>
         <fieldset class="fieldset social fieldset--inactive" id="social">
@@ -296,7 +297,7 @@
           </ul>
           <ul class="fieldset__buttons">
             <button class="button fieldset__cancel--active">Cancelar</button>
-            <button class="button fieldset__next--inactive">Siguiente</button>
+            <button class="button fieldset__next--inactive" data-next="care" id="next-care">Siguiente</button>
           </ul>
         </fieldset>
         <fieldset class="fieldset care fieldset--inactive" id="care">
@@ -339,7 +340,7 @@
           </ul>
           <ul class="fieldset__buttons">
             <button class="button fieldset__cancel--active">Cancelar</button>
-            <button class="button fieldset__next--inactive">Siguiente</button>
+            <button class="button fieldset__next--inactive" data-next="results" id="next-results">Siguiente</button>
           </ul>
         </fieldset>
       </form>
@@ -366,10 +367,10 @@
               más inteligentes y fáciles de entrenar.
             </p><img class="product results__img" src="assets/img/Resultados/AlimentoCachorro.png" alt="Alimento para cachorro">
           </div>
-          <p class="results__p"><a class="button results__clear" href="index.html" title="Repetir test">Repetir test</a></p>
+          <p class="results__p"><a class="button results__clear" href="index.html" title="Repetir test" id="reinicialice">Repetir test</a></p>
         </article>
       </section>
-      <nav class="footer__nav footer__nav--inactive">
+      <footer class="footer__nav" id="footer__nav">
         <ul class="footer__ul">
           <li class="footer__li footer__li--active">
             <p class="footer__p"><a class="footer__a" href="" title="1. Tamaño">1</a></p>
@@ -396,7 +397,7 @@
             <p class="footer__p">Resultado</p>
           </li>
         </ul>
-      </nav>
+      </footer>
     </main>
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>window.jQuery || document.write( '<script src="assets/js/vendor/jquery-1.12.0.min.js"><\/script>' )</script>

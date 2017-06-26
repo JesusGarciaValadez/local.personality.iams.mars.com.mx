@@ -187,6 +187,7 @@ textarea {
   font-weight: "normal";
   font-style: "normal"; }
 
+/* animation: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name */
 html, body, main {
   background-color: #F7F6F3;
   display: table;
@@ -199,6 +200,8 @@ html, body, main {
 
 .button {
   border-radius: 1.25em;
+  border: none;
+  cursor: pointer;
   font-weight: bold;
   padding: 1.1764705882em 2.0588235294em;
   text-align: center;
@@ -271,6 +274,9 @@ html, body, main {
 .form {
   background-color: #F7F6F3;
   box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
@@ -278,6 +284,7 @@ html, body, main {
   height: 102vh;
   padding: 13% 0 0;
   position: absolute;
+  right: -100vw;
   top: 0;
   z-index: 1; }
   .form .fieldset {
@@ -341,11 +348,13 @@ html, body, main {
               width: 100%; }
             .form .fieldset .fieldset__ul .fieldset__li .fieldset__label .fieldset__figure .fieldset__caption {
               background-color: #009C49;
+              bottom: -1px;
               color: #FFFFFF;
               display: block;
               font: normal 10px/1.2em "GothamLight";
               text-align: left;
-              padding: 15px 10px; }
+              padding: 15px 10px;
+              position: relative; }
           .form .fieldset .fieldset__ul .fieldset__li .fieldset__label .fieldset__radio {
             display: block;
             height: 100%;
@@ -405,15 +414,8 @@ html, body, main {
     display: none; }
 
 .form--active {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  right: 0vw;
-  transition: all 3s 5s ease; }
-
-.form--inactive {
-  display: none;
-  right: -100vw; }
+  -webkit-animation: .25s ease 0s 1 normal forwards running formIn;
+          animation: .25s ease 0s 1 normal forwards running formIn; }
 
 .results {
   background-color: #FFFFFF;
@@ -478,7 +480,8 @@ html, body, main {
 
 .footer__nav {
   background-color: #009B43;
-  bottom: 0;
+  display: table;
+  bottom: -7%;
   height: 7%;
   left: 0;
   position: fixed;
@@ -530,10 +533,48 @@ html, body, main {
         color: #FFFFFF; }
 
 .footer__nav--active {
-  display: table; }
+  -webkit-animation: .3s ease-out 0s 1 normal forwards running footerIn;
+          animation: .3s ease-out 0s 1 normal forwards running footerIn; }
 
-.footer__nav--inactive {
-  display: none; }
+@-webkit-keyframes formIn {
+  from {
+    right: -100vw; }
+  to {
+    right: 0vw; } }
+
+@keyframes formIn {
+  from {
+    right: -100vw; }
+  to {
+    right: 0vw; } }
+
+@-webkit-keyframes footerIn {
+  from {
+    bottom: -7%; }
+  to {
+    bottom: 0; } }
+
+@keyframes footerIn {
+  from {
+    bottom: -7%; }
+  to {
+    bottom: 0; } }
+
+@-webkit-keyframes slideIn {
+  from { }
+  to { } }
+
+@keyframes slideIn {
+  from { }
+  to { } }
+
+@-webkit-keyframes slideOut {
+  from { }
+  to { } }
+
+@keyframes slideOut {
+  from { }
+  to { } }
 
 /* ==========================================================================
  Helper classes

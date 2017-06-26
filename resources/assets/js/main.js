@@ -1,23 +1,30 @@
 ( function () {
-  var button__a     = document.getElementsByClassName( 'section__a' )[ 0 ],
-      form          = document.getElementsByClassName( 'form' )[ 0 ],
-      fieldset__li  = document.getElementsByClassName( 'fieldset__li' )[ 0 ],
-      footer        = document.getElementsByClassName( 'footer__nav' )[ 0 ];
+  var $next_height  = document.getElementById( 'next-height' ),
+      $form         = document.getElementById( 'form' ),
+      $fieldset__li = document.getElementsByClassName( 'fieldset__li' ),
+      $footer       = document.getElementById( 'footer__nav' );
 
-  button__a.addEventListener( "click", function ( event ) {
-    //console.log( event.currentTarget );
-    console.log( footer );
-    form.classList.toggle( "form--inactive" );
-    form.classList.toggle( "form--active" );
+  $next_height.addEventListener( "click", function ( event ) {
+    $form.classList.add( "form--active" );
 
-    footer.classList.toggle( "footer__nav--inactive" );
-    footer.classList.toggle( "footer__nav--active" );
+    $footer.classList.add( "footer__nav--active" );
   } );
 
-  fieldset__li.addEventListener( "click", function ( event ) {
-    //console.log( event.currentTarget );
-    console.log( event.currentTarget.parentElement );
-    event.currentTarget.classList.toggle( "fieldset__li--active" );
-    event.currentTarget.parentElement.classList.toggle( "fieldset__li--active" );
+  Array.from( $fieldset__li ).forEach( function( element ) {
+    element.addEventListener( "click", function ( event ) {
+      console.log( event );
+      console.log( event.currentTarget.parentElement );
+
+      $fieldset__li_active  = document.getElementsByClassName( "fieldset__li" );
+
+      Array.from( $fieldset__li_active ).forEach( function( element ) {
+        element.classList.remove( "fieldset__li--active" );
+      } );
+
+      event.currentTarget.classList.add( "fieldset__li--active" );
+      const $fieldset__next = event.currentTarget.parentElement.parentElement.children[ 2 ].children[ 1 ];
+      $fieldset__next.classList.remove( "fieldset__next--inactive" );
+      $fieldset__next.classList.add( "fieldset__next--active" );
+    } );
   } );
 } )();

@@ -1,3 +1,4 @@
+/* animation: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name */
 html, body, main
   background-color: $background-color
   display: table
@@ -8,6 +9,8 @@ html, body, main
   overflow: hidden
 .button
   border-radius: 1.25em
+  border: none
+  cursor: pointer
   font-weight: bold
   padding: 1.1764705882em 2.0588235294em
   text-align: center
@@ -77,10 +80,12 @@ html, body, main
 .form
   background-color: $fieldset-background-color
   box-sizing: border-box
+  display: inline-flex
   flex-flow: row nowrap
   height: 102vh
   padding: 13% 0 0
   position: absolute
+  right: -100vw
   top: 0
   z-index: 1
   .fieldset
@@ -136,11 +141,13 @@ html, body, main
               width: 100%
             .fieldset__caption
               background-color: $fieldset__figcaption-background-color
+              bottom: -1px
               color: $fieldset__figcaption-color
               display: block
               font: normal 10px/1.2em $Gotham-Light
               text-align: left
               padding: 15px 10px
+              position: relative
           .fieldset__radio
             display: block
             height: 100%
@@ -197,12 +204,7 @@ html, body, main
   .fieldset--inactive
     display: none
 .form--active
-  display: inline-flex
-  right: 0vw
-  transition: all 3s 5s ease
-.form--inactive
-  display: none
-  right: -100vw
+  animation: .25s ease 0s 1 normal forwards running formIn
 .results
   background-color: $result-background-color
   box-sizing: border-box
@@ -258,7 +260,8 @@ html, body, main
   display: block
 .footer__nav
   background-color: $footer__nav-background-color
-  bottom: 0
+  display: table
+  bottom: -7%
   height: 7%
   left: 0
   position: fixed
@@ -297,6 +300,26 @@ html, body, main
       .footer__p
         color: $footer__p-color
 .footer__nav--active
-  display: table
-.footer__nav--inactive
-  display: none
+  animation: .3s ease-out 0s 1 normal forwards running footerIn
+
+@keyframes formIn
+  from
+    right: -100vw
+  to
+    right: 0vw
+
+@keyframes footerIn
+  from
+    bottom: -7%
+  to
+    bottom: 0
+
+@keyframes slideIn
+  from
+
+  to
+
+@keyframes slideOut
+  from
+
+  to
