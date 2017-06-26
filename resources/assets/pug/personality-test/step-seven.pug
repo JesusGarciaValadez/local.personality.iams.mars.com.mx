@@ -1,4 +1,4 @@
-fieldset.fieldset.care.fieldset--inactive#care
+fieldset.fieldset.fieldset--inactive#care
   h2.fieldset__h2 #[legend.fieldset__legend 7] ¿Qué es lo que más cuidas de tu perro?
   ul.fieldset__ul
     li.fieldset__li
@@ -31,4 +31,4 @@ fieldset.fieldset.care.fieldset--inactive#care
         input(type="radio", name="size", value="overweight").fieldset__radio#size__overweight
   ul.fieldset__buttons
     button.button.fieldset__cancel--active Cancelar
-    button(data-next="results").button.fieldset__next--inactive#next-results Siguiente
+    button(disabled="disabled", data-section="results").button.fieldset__next.fieldset__next--inactive Siguiente

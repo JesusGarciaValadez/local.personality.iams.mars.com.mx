@@ -1,4 +1,4 @@
-fieldset.fieldset.size.fieldset--inactive#size
+fieldset.fieldset.fieldset--inactive#size
   h2.fieldset__h2 #[legend.fieldset__legend 4] ¿Cómo describirías físicamente a tu perro?
   ul.fieldset__ul
     li.fieldset__li
@@ -31,4 +31,4 @@ fieldset.fieldset.size.fieldset--inactive#size
         input(type="radio", name="size", value="overweight").fieldset__radio#size__overweight
   ul.fieldset__buttons
     button.button.fieldset__cancel--active Cancelar
-    button(data-next="game").button.fieldset__next--inactive#next-game Siguiente
+    button(disabled="disabled", data-section="game").button.fieldset__next.fieldset__next--inactive Siguiente

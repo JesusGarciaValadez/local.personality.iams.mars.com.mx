@@ -80,12 +80,14 @@ textarea {
   src: url("../fonts/Gotham-Black.eot");
   src: url("../fonts/Gotham-Black.eot?#iefix") format("embedded-opentype");
   /* IE6-IE8 */
-  src: url("../fonts/Gotham-Black.woff2") format("woff2");
-  /* Super Modern Browsers */
-  src: url("../fonts/Gotham-Black.woff") format("woff");
-  /* Pretty Modern Browsers */
+  src: url("../fonts/Gotham-Black.otf") format("opentype");
+  /* Safari, Android, iOS */
   src: url("../fonts/Gotham-Black.ttf") format("truetype");
   /* Safari, Android, iOS */
+  src: url("../fonts/Gotham-Black.woff") format("woff");
+  /* Pretty Modern Browsers */
+  src: url("../fonts/Gotham-Black.woff2") format("woff2");
+  /* Super Modern Browsers */
   src: url("../fonts/Gotham-Black.svg#svgFontName") format("svg");
   /* Legacy iOS */
   font-weight: "normal";
@@ -96,12 +98,14 @@ textarea {
   src: url("../fonts/Gotham-Bold.eot");
   src: url("../fonts/Gotham-Bold.eot?#iefix") format("embedded-opentype");
   /* IE6-IE8 */
-  src: url("../fonts/Gotham-Bold.woff2") format("woff2");
-  /* Super Modern Browsers */
-  src: url("../fonts/Gotham-Bold.woff") format("woff");
-  /* Pretty Modern Browsers */
+  src: url("../fonts/Gotham-Bold.otf") format("opentype");
+  /* Safari, Android, iOS */
   src: url("../fonts/Gotham-Bold.ttf") format("truetype");
   /* Safari, Android, iOS */
+  src: url("../fonts/Gotham-Bold.woff") format("woff");
+  /* Pretty Modern Browsers */
+  src: url("../fonts/Gotham-Bold.woff2") format("woff2");
+  /* Super Modern Browsers */
   src: url("../fonts/Gotham-Bold.svg#svgFontName") format("svg");
   /* Legacy iOS */
   font-weight: "normal";
@@ -112,12 +116,14 @@ textarea {
   src: url("../fonts/Gotham-Book.eot");
   src: url("../fonts/Gotham-Book.eot?#iefix") format("embedded-opentype");
   /* IE6-IE8 */
-  src: url("../fonts/Gotham-Book.woff2") format("woff2");
-  /* Super Modern Browsers */
-  src: url("../fonts/Gotham-Book.woff") format("woff");
-  /* Pretty Modern Browsers */
+  src: url("../fonts/Gotham-Book.otf") format("opentype");
+  /* Safari, Android, iOS */
   src: url("../fonts/Gotham-Book.ttf") format("truetype");
   /* Safari, Android, iOS */
+  src: url("../fonts/Gotham-Book.woff") format("woff");
+  /* Pretty Modern Browsers */
+  src: url("../fonts/Gotham-Book.woff2") format("woff2");
+  /* Super Modern Browsers */
   src: url("../fonts/Gotham-Book.svg#svgFontName") format("svg");
   /* Legacy iOS */
   font-weight: "normal";
@@ -128,12 +134,14 @@ textarea {
   src: url("../fonts/Gotham-Light.eot");
   src: url("../fonts/Gotham-Light.eot?#iefix") format("embedded-opentype");
   /* IE6-IE8 */
-  src: url("../fonts/Gotham-Light.woff2") format("woff2");
-  /* Super Modern Browsers */
-  src: url("../fonts/Gotham-Light.woff") format("woff");
-  /* Pretty Modern Browsers */
+  src: url("../fonts/Gotham-Light.otf") format("opentype");
+  /* Safari, Android, iOS */
   src: url("../fonts/Gotham-Light.ttf") format("truetype");
   /* Safari, Android, iOS */
+  src: url("../fonts/Gotham-Light.woff") format("woff");
+  /* Pretty Modern Browsers */
+  src: url("../fonts/Gotham-Light.woff2") format("woff2");
+  /* Super Modern Browsers */
   src: url("../fonts/Gotham-Light.svg#svgFontName") format("svg");
   /* Legacy iOS */
   font-weight: "normal";
@@ -141,32 +149,36 @@ textarea {
 
 @font-face {
   font-family: "GothamRoundedBook";
-  src: url("../fonts/GothamRounded-Book.eot");
-  src: url("../fonts/GothamRounded-Book.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/Gotham-Rounded-Book.eot");
+  src: url("../fonts/Gotham-Rounded-Book.eot?#iefix") format("embedded-opentype");
   /* IE6-IE8 */
-  src: url("../fonts/GothamRounded-Book.woff2") format("woff2");
-  /* Super Modern Browsers */
-  src: url("../fonts/GothamRounded-Book.woff") format("woff");
-  /* Pretty Modern Browsers */
-  src: url("../fonts/GothamRounded-Book.ttf") format("truetype");
+  src: url("../fonts/Gotham-Rounded-Book.otf") format("opentype");
   /* Safari, Android, iOS */
-  src: url("../fonts/GothamRounded-Book.svg#svgFontName") format("svg");
+  src: url("../fonts/Gotham-Rounded-Book.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  src: url("../fonts/Gotham-Rounded-Book.woff") format("woff");
+  /* Pretty Modern Browsers */
+  src: url("../fonts/Gotham-Rounded-Book.woff2") format("woff2");
+  /* Super Modern Browsers */
+  src: url("../fonts/Gotham-Rounded-Book.svg#svgFontName") format("svg");
   /* Legacy iOS */
   font-weight: "normal";
   font-style: "normal"; }
 
 @font-face {
   font-family: "GothamRoundedMedium";
-  src: url("../fonts/GothamRounded-Medium.eot");
-  src: url("../fonts/GothamRounded-Medium.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/Gotham-Rounded-Medium.eot");
+  src: url("../fonts/Gotham-Rounded-Medium.eot?#iefix") format("embedded-opentype");
   /* IE6-IE8 */
-  src: url("../fonts/GothamRounded-Medium.woff2") format("woff2");
-  /* Super Modern Browsers */
-  src: url("../fonts/GothamRounded-Medium.woff") format("woff");
-  /* Pretty Modern Browsers */
-  src: url("../fonts/GothamRounded-Medium.ttf") format("truetype");
+  src: url("../fonts/Gotham-Rounded-Medium.otf") format("opentype");
   /* Safari, Android, iOS */
-  src: url("../fonts/GothamRounded-Medium.svg#svgFontName") format("svg");
+  src: url("../fonts/Gotham-Rounded-Medium.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  src: url("../fonts/Gotham-Rounded-Medium.woff") format("woff");
+  /* Pretty Modern Browsers */
+  src: url("../fonts/Gotham-Rounded-Medium.woff2") format("woff2");
+  /* Super Modern Browsers */
+  src: url("../fonts/Gotham-Rounded-Medium.svg#svgFontName") format("svg");
   /* Legacy iOS */
   font-weight: "normal";
   font-style: "normal"; }
@@ -195,7 +207,7 @@ html, body, main {
   position: relative;
   width: 100%; }
 
-.main {
+main {
   overflow: hidden; }
 
 .button {
@@ -281,7 +293,7 @@ html, body, main {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  height: 102vh;
+  height: 100.3vh;
   padding: 13% 0 0;
   position: absolute;
   right: -100vw;
@@ -289,15 +301,18 @@ html, body, main {
   z-index: 1; }
   .form .fieldset {
     box-sizing: border-box;
-    height: 100%;
-    padding-bottom: 16%; }
+    height: 100vh;
+    padding-bottom: 12.6%; }
+    .form .fieldset:target {
+      -webkit-animation: .25s ease-in 0s 1 normal forwards running slideIn;
+              animation: .25s ease-in 0s 1 normal forwards running slideIn; }
     .form .fieldset .fieldset__h2 {
       box-sizing: border-box;
       color: #333333;
       font-family: "GothamBold";
-      font-size: 0.8235294118em;
+      font-size: 0.8125em;
       line-height: 1.5em;
-      margin: 2.8571428571em 0 1.4285714286em;
+      margin: 1.875em 0 0.625em;
       padding: 0 2.1em 0 5em;
       position: relative;
       text-transform: uppercase;
@@ -327,7 +342,7 @@ html, body, main {
         display: -webkit-inline-box;
         display: -ms-inline-flexbox;
         display: inline-flex;
-        margin: 4%;
+        margin: 2.5% 4%;
         width: 46%; }
         .form .fieldset .fieldset__ul .fieldset__li:nth-child(even) {
           margin-right: 0; }
@@ -380,6 +395,9 @@ html, body, main {
               flex-flow: row nowrap;
       margin: 0;
       padding: 0; }
+      .form .fieldset .fieldset__buttons:inactive {
+        background-color: #DADBDB;
+        color: #FFFFFF; }
       .form .fieldset .fieldset__buttons .button {
         -ms-flex-item-align: center;
             -ms-grid-row-align: center;
@@ -404,7 +422,8 @@ html, body, main {
         background-color: #DADBDB;
         color: #FFFFFF; }
       .form .fieldset .fieldset__buttons .fieldset__next--active {
-        background-color: #009B43; }
+        background-color: #009B43;
+        color: #FFFFFF; }
   .form .fieldset--intro .fieldset__ul .fieldset__li .fieldset__label .fieldset__figure .fieldset__caption {
     font: bold 13px/1.2em "GothamBold";
     text-align: center; }
@@ -561,20 +580,28 @@ html, body, main {
     bottom: 0; } }
 
 @-webkit-keyframes slideIn {
-  from { }
-  to { } }
+  from {
+    right: -100vw; }
+  to {
+    right: 0vw; } }
 
 @keyframes slideIn {
-  from { }
-  to { } }
+  from {
+    right: -100vw; }
+  to {
+    right: 0vw; } }
 
 @-webkit-keyframes slideOut {
-  from { }
-  to { } }
+  from {
+    right: 0vw; }
+  to {
+    right: -100vw; } }
 
 @keyframes slideOut {
-  from { }
-  to { } }
+  from {
+    right: 0vw; }
+  to {
+    right: -100vw; } }
 
 /* ==========================================================================
  Helper classes

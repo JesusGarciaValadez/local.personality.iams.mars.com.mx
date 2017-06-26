@@ -1,4 +1,4 @@
-fieldset.fieldset.game.fieldset--inactive#game
+fieldset.fieldset.fieldset--inactive#game
   h2.fieldset__h2 #[legend.fieldset__legend 5] ¿Qué es lo que más cuidas de tu perro?
   ul.fieldset__ul
     li.fieldset__li
@@ -31,4 +31,4 @@ fieldset.fieldset.game.fieldset--inactive#game
         input(type="radio", name="game", value="watch").fieldset__radio#game__watch
   ul.fieldset__buttons
     button.button.fieldset__cancel--active Cancelar
-    button(data-next="social").button.fieldset__next--inactive#next-social Siguiente
+    button(disabled="disabled", data-section="social").button.fieldset__next.fieldset__next--inactive Siguiente

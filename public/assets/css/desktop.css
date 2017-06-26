@@ -1,9 +1,0 @@
-html .header .header__img, body .header .header__img, main .header .header__img {
-  width: 40%; }
-
-html .form, body .form, main .form {
-  display: none;
-  left: 0;
-  position: absolute;
-  top: 0; }
-/*# sourceMappingURL=desktop.css.map */

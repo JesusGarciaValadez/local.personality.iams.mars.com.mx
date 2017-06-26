@@ -54,7 +54,7 @@
       <section class="section">
         <div class="section__div"><img class="section__img" src="assets/img/pleca-test.png" alt="Test"><img class="section__img-logo" src="assets/img/logoIAMS.svg" alt="IAMS">
           <h1 class="section__h1">Descubre la <br /><strong class="section__strong">personalidad</strong> <br /><span class="section__span">de tu perro</span></h1>
-          <button class="button section__a" data-next="height" id="next-height">Comenzar</button>
+          <button class="button section__a section__a--inactive" data-section="height" id="next-height">Comenzar</button>
         </div>
       </section>
       <form class="form" action="action.php" method="POST" id="form">
@@ -90,10 +90,10 @@
           </ul>
           <ul class="fieldset__buttons">
             <button class="button fieldset__cancel--active">Cancelar</button>
-            <button class="button fieldset__next--inactive" data-next="age" id="next--age">Siguiente</button>
+            <button class="button fieldset__next fieldset__next--inactive" disabled="disabled" data-section="age">Siguiente</button>
           </ul>
         </fieldset>
-        <fieldset class="fieldset fieldset--intro fieldset--inactive age" id="age">
+        <fieldset class="fieldset fieldset--intro fieldset--inactive" id="age">
           <h2 class="fieldset__h2">
             <legend class="fieldset__legend">2</legend> Tu perro es…
           </h2>
@@ -125,10 +125,10 @@
           </ul>
           <ul class="fieldset__buttons">
             <button class="button fieldset__cancel--active">Cancelar</button>
-            <button class="button fieldset__next--inactive" data-next="behavior" id="next-behavior">Siguiente</button>
+            <button class="button fieldset__next fieldset__next--inactive" disabled="disabled" data-section="behavior">Siguiente</button>
           </ul>
         </fieldset>
-        <fieldset class="fieldset behavior fieldset--inactive" id="behavior">
+        <fieldset class="fieldset fieldset--inactive" id="behavior">
           <h2 class="fieldset__h2">
             <legend class="fieldset__legend">3</legend> ¿Cuál de estos comportamientos describe mejor a tu perro?
           </h2>
@@ -168,10 +168,10 @@
           </ul>
           <ul class="fieldset__buttons">
             <button class="button fieldset__cancel--active">Cancelar</button>
-            <button class="button fieldset__next--inactive" data-next="size" id="next-size">Siguiente</button>
+            <button class="button fieldset__next fieldset__next--inactive" disabled="disabled" data-section="size">Siguiente</button>
           </ul>
         </fieldset>
-        <fieldset class="fieldset size fieldset--inactive" id="size">
+        <fieldset class="fieldset fieldset--inactive" id="size">
           <h2 class="fieldset__h2">
             <legend class="fieldset__legend">4</legend> ¿Cómo describirías físicamente a tu perro?
           </h2>
@@ -211,10 +211,10 @@
           </ul>
           <ul class="fieldset__buttons">
             <button class="button fieldset__cancel--active">Cancelar</button>
-            <button class="button fieldset__next--inactive" data-next="game" id="next-game">Siguiente</button>
+            <button class="button fieldset__next fieldset__next--inactive" disabled="disabled" data-section="game">Siguiente</button>
           </ul>
         </fieldset>
-        <fieldset class="fieldset game fieldset--inactive" id="game">
+        <fieldset class="fieldset fieldset--inactive" id="game">
           <h2 class="fieldset__h2">
             <legend class="fieldset__legend">5</legend> ¿Qué es lo que más cuidas de tu perro?
           </h2>
@@ -254,10 +254,10 @@
           </ul>
           <ul class="fieldset__buttons">
             <button class="button fieldset__cancel--active">Cancelar</button>
-            <button class="button fieldset__next--inactive" data-next="social" id="next-social">Siguiente</button>
+            <button class="button fieldset__next fieldset__next--inactive" disabled="disabled" data-section="social">Siguiente</button>
           </ul>
         </fieldset>
-        <fieldset class="fieldset social fieldset--inactive" id="social">
+        <fieldset class="fieldset fieldset--inactive" id="social">
           <h2 class="fieldset__h2">
             <legend class="fieldset__legend">6</legend> ¿Cómo reacciona tu perro con la gente?
           </h2>
@@ -297,10 +297,10 @@
           </ul>
           <ul class="fieldset__buttons">
             <button class="button fieldset__cancel--active">Cancelar</button>
-            <button class="button fieldset__next--inactive" data-next="care" id="next-care">Siguiente</button>
+            <button class="button fieldset__next fieldset__next--inactive" disabled="disabled" data-section="care">Siguiente</button>
           </ul>
         </fieldset>
-        <fieldset class="fieldset care fieldset--inactive" id="care">
+        <fieldset class="fieldset fieldset--inactive" id="care">
           <h2 class="fieldset__h2">
             <legend class="fieldset__legend">7</legend> ¿Qué es lo que más cuidas de tu perro?
           </h2>
@@ -340,7 +340,7 @@
           </ul>
           <ul class="fieldset__buttons">
             <button class="button fieldset__cancel--active">Cancelar</button>
-            <button class="button fieldset__next--inactive" data-next="results" id="next-results">Siguiente</button>
+            <button class="button fieldset__next fieldset__next--inactive" disabled="disabled" data-section="results">Siguiente</button>
           </ul>
         </fieldset>
       </form>
@@ -399,8 +399,8 @@
         </ul>
       </footer>
     </main>
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script>window.jQuery || document.write( '<script src="assets/js/vendor/jquery-1.12.0.min.js"><\/script>' )</script>
+    <script src="https://unpkg.com/jquery@3.2.1/dist/jquery.js"></script>
+    <script>window.jQuery || document.write( '<script src="https://unpkg.com/jquery@3.2.1/dist/jquery.js"><\/script>' )</script>
     <script src="assets/js/main.min.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
     <script>

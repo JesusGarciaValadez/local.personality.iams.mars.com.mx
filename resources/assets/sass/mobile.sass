@@ -5,7 +5,7 @@ html, body, main
   height: 100%
   position: relative
   width: 100%
-.main
+main
   overflow: hidden
 .button
   border-radius: 1.25em
@@ -82,7 +82,7 @@ html, body, main
   box-sizing: border-box
   display: inline-flex
   flex-flow: row nowrap
-  height: 102vh
+  height: 100.3vh
   padding: 13% 0 0
   position: absolute
   right: -100vw
@@ -90,15 +90,17 @@ html, body, main
   z-index: 1
   .fieldset
     box-sizing: border-box
-    height: 100%
-    padding-bottom: 16%
+    height: 100vh
+    padding-bottom: 12.6%
+    &:target
+      animation: .25s ease-in 0s 1 normal forwards running slideIn
     .fieldset__h2
       box-sizing: border-box
       color: $fieldset__legend-color
       font-family: $Gotham-Bold
-      font-size: 0.8235294118em // 14px
+      font-size: 0.8125em // 14px
       line-height: 1.5em
-      margin: 2.8571428571em 0 1.4285714286em // 40px 0 30px
+      margin: 1.875em 0 0.625em // 30px 0 10px
       padding: 0 2.1em 0 5em // 0 29.4px 0 70px
       position: relative
       text-transform: uppercase
@@ -120,7 +122,7 @@ html, body, main
       width: 80%
       .fieldset__li
         display: inline-flex
-        margin: 4%
+        margin: 2.5% 4%
         width: 46%
         &:nth-child( even )
           margin-right: 0
@@ -168,6 +170,9 @@ html, body, main
       flex-flow: row nowrap
       margin: 0
       padding: 0
+      &:inactive
+        background-color: $fieldset__next--inactive-background-color
+        color: $fieldset__next--active-color
       .button
         align-self: center
         border: 0 none transparent
@@ -191,6 +196,7 @@ html, body, main
         color: $fieldset__next--active-color
       .fieldset__next--active
         background-color: $fieldset__next--active-background-color
+        color: $fieldset__next--active-color
   .fieldset--intro
     .fieldset__ul
       .fieldset__li
@@ -307,19 +313,18 @@ html, body, main
     right: -100vw
   to
     right: 0vw
-
 @keyframes footerIn
   from
     bottom: -7%
   to
     bottom: 0
-
 @keyframes slideIn
   from
-
+    right: -100vw
   to
-
+    right: 0vw
 @keyframes slideOut
   from
-
+    right: 0vw
   to
+    right: -100vw
