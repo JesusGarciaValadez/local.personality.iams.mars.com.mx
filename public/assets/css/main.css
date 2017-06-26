@@ -236,16 +236,15 @@ main {
     display: none; }
 
 .section, .form, .results {
-  display: table;
-  height: auto;
-  position: relative;
-  width: 100%; }
+  display: table; }
 
 .section {
   background: url("../img/background.png") 40% bottom transparent;
   background-size: auto 100%;
-  height: 93%;
-  z-index: 0; }
+  height: 93vh;
+  position: absolute;
+  width: 100vw;
+  z-index: 2; }
   .section .section__img {
     position: absolute;
     top: 1%;
@@ -296,16 +295,32 @@ main {
   height: 100.3vh;
   padding: 13% 0 0;
   position: absolute;
-  right: -100vw;
+  right: 0vw;
   top: 0;
+  width: 100vw;
   z-index: 1; }
   .form .fieldset {
+    background-color: #F7F6F3;
     box-sizing: border-box;
     height: 100vh;
-    padding-bottom: 12.6%; }
-    .form .fieldset:target {
-      -webkit-animation: .25s ease-in 0s 1 normal forwards running slideIn;
-              animation: .25s ease-in 0s 1 normal forwards running slideIn; }
+    padding-bottom: 12.6%;
+    position: absolute;
+    right: -100vw;
+    width: 100vw; }
+    .form .fieldset:nth-child(1) {
+      z-index: 1; }
+    .form .fieldset:nth-child(2) {
+      z-index: 2; }
+    .form .fieldset:nth-child(3) {
+      z-index: 3; }
+    .form .fieldset:nth-child(4) {
+      z-index: 4; }
+    .form .fieldset:nth-child(5) {
+      z-index: 5; }
+    .form .fieldset:nth-child(6) {
+      z-index: 6; }
+    .form .fieldset:nth-child(7) {
+      z-index: 7; }
     .form .fieldset .fieldset__h2 {
       box-sizing: border-box;
       color: #333333;
@@ -428,17 +443,19 @@ main {
     font: bold 13px/1.2em "GothamBold";
     text-align: center; }
   .form .fieldset--active {
-    display: inline-block; }
+    -webkit-animation: .25s ease-in 0s 1 normal forwards running slideIn;
+            animation: .25s ease-in 0s 1 normal forwards running slideIn; }
   .form .fieldset--inactive {
     display: none; }
 
 .form--active {
-  -webkit-animation: .25s ease 0s 1 normal forwards running formIn;
-          animation: .25s ease 0s 1 normal forwards running formIn; }
+  -webkit-animation: .1s ease-in 0s 1 normal forwards running formIn;
+          animation: .1s ease-in 0s 1 normal forwards running formIn; }
 
 .results {
   background-color: #FFFFFF;
   box-sizing: border-box;
+  display: block;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
@@ -446,6 +463,7 @@ main {
   height: 102vh;
   padding: 10% 8%;
   position: absolute;
+  right: -100vw;
   top: 0;
   width: 100vw;
   z-index: 3; }
@@ -473,7 +491,7 @@ main {
         width: 59%; }
       .results .results__wrapper .results__div--right .product.results__img {
         float: right;
-        margin: 45% 0 0;
+        margin: -35% 0 0;
         padding: 0;
         width: 30%; }
     .results .results__wrapper .results__clear {
@@ -495,7 +513,8 @@ main {
   display: none; }
 
 .results--active {
-  display: block; }
+  -webkit-animation: .3s ease-out 0s 1 normal forwards running resultsIn;
+          animation: .3s ease-out 0s 1 normal forwards running resultsIn; }
 
 .footer__nav {
   background-color: #009B43;
@@ -557,15 +576,15 @@ main {
 
 @-webkit-keyframes formIn {
   from {
-    right: -100vw; }
+    z-index: 1; }
   to {
-    right: 0vw; } }
+    z-index: 2; } }
 
 @keyframes formIn {
   from {
-    right: -100vw; }
+    z-index: 1; }
   to {
-    right: 0vw; } }
+    z-index: 2; } }
 
 @-webkit-keyframes footerIn {
   from {
@@ -602,6 +621,18 @@ main {
     right: 0vw; }
   to {
     right: -100vw; } }
+
+@-webkit-keyframes resultsIn {
+  from {
+    right: -100vw; }
+  to {
+    right: 0vw; } }
+
+@keyframes resultsIn {
+  from {
+    right: -100vw; }
+  to {
+    right: 0vw; } }
 
 /* ==========================================================================
  Helper classes
