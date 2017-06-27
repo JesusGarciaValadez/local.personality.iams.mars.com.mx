@@ -1,0 +1,8 @@
+{
+  "dogImg":         "assets/img/Resultados/cierre_consentido.png",
+  "dogImgAlt":      "Perro en una cama",
+  "title":          "Tu perro es un consentido",
+  "message":        "<p class=\"results__p\">Tu perro es un consentido: es tierno y chiquito, busca compañía todo el tiempo y es muy amigable aunque a veces se puede poner celoso. en cuanto te ve en el sillón es el primero en acercarse para estar cerca. Tu perro cae bien porque a la gente le gusta acariciarlo y decirle lo guapo que está.</p><p class=\"results__p\">Aliméntalo con IAMS Cachorro que le brindará los nutrientes que necesitan, como los minerales esenciales para fortalecer sus huesos y DHA (Omega 3) para cachorros más inteligentes y fáciles de entrenar.</p>",
+  "productImg":     "assets/img/Resultados/AlimentoCachorro.png",
+  "productImgAlt":  "Alimento para cachorro"
+}

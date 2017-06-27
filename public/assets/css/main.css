@@ -305,6 +305,7 @@ main {
     height: 100vh;
     padding-bottom: 12.6%;
     position: absolute;
+    top: 12vw;
     right: -100vw;
     width: 100vw; }
     .form .fieldset:nth-child(1) {
@@ -442,11 +443,17 @@ main {
   .form .fieldset--intro .fieldset__ul .fieldset__li .fieldset__label .fieldset__figure .fieldset__caption {
     font: bold 13px/1.2em "GothamBold";
     text-align: center; }
-  .form .fieldset--active {
-    -webkit-animation: .25s ease-in 0s 1 normal forwards running slideIn;
-            animation: .25s ease-in 0s 1 normal forwards running slideIn; }
   .form .fieldset--inactive {
     display: none; }
+  .form .fieldset--active {
+    -webkit-animation: .3s ease-in 0s 1 normal forwards running slideIn;
+            animation: .3s ease-in 0s 1 normal forwards running slideIn; }
+  .form .fieldset-down {
+    right: 0;
+    top: -100vh; }
+  .form .fieldset--active-down {
+    -webkit-animation: .3s ease-in 0s 1 normal forwards running slideDown;
+            animation: .3s ease-in 0s 1 normal forwards running slideDown; }
 
 .form--active {
   -webkit-animation: .1s ease-in 0s 1 normal forwards running formIn;
@@ -475,7 +482,7 @@ main {
     box-sizing: border-box; }
     .results .results__wrapper .results__div--left {
       width: 100%; }
-      .results .results__wrapper .results__div--left .dog.results__img {
+      .results .results__wrapper .results__div--left .results__img#dog-img {
         width: 100%; }
     .results .results__wrapper .results__div--right {
       width: 100%; }
@@ -489,7 +496,7 @@ main {
         font: normal 11px/1.2em "GothamLight";
         margin: 3% 0 3% 5%;
         width: 59%; }
-      .results .results__wrapper .results__div--right .product.results__img {
+      .results .results__wrapper .results__div--right .results__img#product-img {
         float: right;
         margin: -35% 0 0;
         padding: 0;
@@ -509,12 +516,9 @@ main {
       padding: 25px 15px;
       width: 40%; }
 
-.results--inactive {
-  display: none; }
-
 .results--active {
-  -webkit-animation: .3s ease-out 0s 1 normal forwards running resultsIn;
-          animation: .3s ease-out 0s 1 normal forwards running resultsIn; }
+  -webkit-animation: .3s ease-out 3s 1 normal forwards running resultsIn;
+          animation: .3s ease-out 3s 1 normal forwards running resultsIn; }
 
 .footer__nav {
   background-color: #009B43;
@@ -549,7 +553,15 @@ main {
       height: 100%;
       width: 12.5%; }
     .footer__nav .footer__ul .footer__li {
-      background-color: #008A42; }
+      position: relative; }
+      .footer__nav .footer__ul .footer__li .footer__background {
+        background-color: #008A42;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 0;
+        z-index: 0; }
       .footer__nav .footer__ul .footer__li .footer__p {
         -ms-flex-item-align: center;
             -ms-grid-row-align: center;
@@ -559,7 +571,9 @@ main {
         font: normal 11px/1.5em "GothamBold";
         margin: 0;
         padding-left: 18px;
-        text-transform: uppercase; }
+        position: relative;
+        text-transform: uppercase;
+        z-index: 1; }
         .footer__nav .footer__ul .footer__li .footer__p .footer__a {
           color: inherit;
           text-decoration: none; }
@@ -567,6 +581,9 @@ main {
       background-color: transparent;
       border-right: 1px solid;
       border: 0 none transparent; }
+      .footer__nav .footer__ul .footer__li--active .footer__background {
+        -webkit-animation: 1s ease 0s 1 normal forwards running fillFooter;
+                animation: 1s ease 0s 1 normal forwards running fillFooter; }
       .footer__nav .footer__ul .footer__li--active .footer__p {
         color: #FFFFFF; }
 
@@ -622,6 +639,18 @@ main {
   to {
     right: -100vw; } }
 
+@-webkit-keyframes slideDown {
+  from {
+    top: -100vh; }
+  to {
+    top: 7vh; } }
+
+@keyframes slideDown {
+  from {
+    top: -100vh; }
+  to {
+    top: 7vh; } }
+
 @-webkit-keyframes resultsIn {
   from {
     right: -100vw; }
@@ -633,6 +662,18 @@ main {
     right: -100vw; }
   to {
     right: 0vw; } }
+
+@-webkit-keyframes fillFooter {
+  from {
+    width: 0%; }
+  to {
+    width: 100%; } }
+
+@keyframes fillFooter {
+  from {
+    width: 0%; }
+  to {
+    width: 100%; } }
 
 /* ==========================================================================
  Helper classes

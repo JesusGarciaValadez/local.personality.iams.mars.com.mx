@@ -16762,6 +16762,14 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/resources\/assets\/js\/response.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/public\/assets\/js\/response.min.json",
+		"oF": 3,
+		"oO": 1,
+		"oS": 1
+		},
 	"\/resources\/assets\/js\/vendor\/jquery-1.12.0.min.js": {
 		"ft": 64,
 		"mi": 1,
@@ -17000,7 +17008,7 @@
 "projectAttributes": {
 	"creationDate": 519242194,
 	"displayValue": "local.personality.iams.mars.com.mx",
-	"displayValueWasSetByUser": 0,
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-maroney"
 	},
 "projectSettings": {
@@ -18774,7 +18782,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 2,
-		"createSourceMap": 0,
+		"createSourceMap": 1,
 		"minifyOutput": 1,
 		"syntaxCheckerStyle": 1,
 		"transpilerStyle": 0
