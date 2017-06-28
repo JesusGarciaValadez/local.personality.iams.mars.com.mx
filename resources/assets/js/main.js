@@ -13,7 +13,6 @@
 
     $form.classList.add( "form--active" );
 
-    $fieldset[ 0 ].classList.remove( "fieldset--inactive" );
     $fieldset[ 0 ].classList.add( "fieldset--active" );
 
     $footer.classList.add( "footer__nav--active" );
@@ -62,7 +61,6 @@ $( function () {
 
     var $section            = "#" + $( event.currentTarget ).data( "section" ),
         $slideClassActive   = "fieldset--active";
-        $slideClassInactive = "fieldset--inactive";
 
     counter++;
 
@@ -70,7 +68,6 @@ $( function () {
 
     if ( $section == "#results" ) {
       $slideClassActive   = "results--active";
-      $slideClassInactive = "results--inactive";
     }
 
     if ( $( event.currentTarget ).hasClass( "last" ) ) {
@@ -78,7 +75,15 @@ $( function () {
         url: "assets/js/response.min.json",
         method: "POST",
         dataType: "json",
-        data: {},
+        data: {
+          height: $( 'input[name="height"]' ).val(),
+          age: $( 'input[name="age"]' ).val(),
+          behavior: $( 'input[name="behavior"]' ).val(),
+          size: $( 'input[name="size"]' ).val(),
+          game: $( 'input[name="game"]' ).val(),
+          social: $( 'input[name="social"]' ).val(),
+          care: $( 'input[name="care"]' ).val()
+        },
         contentType: "application/json; charset=UTF-8",
         error: function ( jqXHR, textStatus, errorThrown ) {},
       } ).fail( function ( jqXHR, textStatus, errorThrown ) {
@@ -112,12 +117,13 @@ $( function () {
         $product_img.attr( "src", productImg );
         $product_img.attr( "alt", productImg );
 
-        $( $section ).toggleClass( $slideClassActive, true );
-        $( $section ).toggleClass( $slideClassInactive, false );
+        $( $section ).addClass( $slideClassActive );
+        setTimeout( function () {
+          $form.removeClass( "form--active" );
+        }, 3000 );
       } );
     } else {
-      $( $section ).toggleClass( $slideClassActive, true );
-      $( $section ).toggleClass( $slideClassInactive, false );
+      $( $section ).addClass( $slideClassActive );
     }
   } );
 
@@ -125,27 +131,28 @@ $( function () {
     event.preventDefault();
     event.stopPropagation();
 
-    $form.addClass( "form--active" );
-    $results.removeClass( "results--active" );
+    restartForm();
+  } );
 
-    $fieldset.removeClass( "fieldset--active" );
-    $fieldset.addClass( "fieldset--inactive" );
-    $fieldset.eq( 0 ).removeClass( "fieldset--inactive" );
+  function restartForm ( ) {
+    counter = 0;
+    document.getElementsByTagName( "form" )[ 0 ].clear;
+    $form.addClass( "form--active form--overlay" );
+
+    $fieldset.removeClass( "fieldset--active fieldset-down fieldset--active-down" );
     $fieldset.eq( 0 ).addClass( "fieldset-down fieldset--active-down" );
+
+    $fieldset__li.removeClass( "fieldset__li--active" );
+
+    $fieldset__next.removeClass( "fieldset__next--active" );
+    $fieldset__next.attr( "disabled", "disabled" );
+
     $footer__li.removeClass( "footer__li--active" );
     $footer__li.eq( 0 ).addClass( "footer__li--active" );
 
     setTimeout( function () {
-      $results.addClass( "results--inactive" );
+      $results.removeClass( "results--active" );
+      // $form.removeClass( "form--overlay" );
     }, 3000 );
-  } );
-
-  function restartForm ( ) {
-    $form.clear();
-    $form.removeClass( "form--active" );
-    $fieldset.removeClass( "fieldset--active fieldset-down fieldset--active-down" );
-    $fieldset__li.removeClass( "fieldset__li--active" );
-    $fieldset__next.removeClass( "fieldset__next--active" );
-    $results.removeClass( "results--active" );
   }
 } );

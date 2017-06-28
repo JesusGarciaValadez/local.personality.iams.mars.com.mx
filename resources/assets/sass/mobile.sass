@@ -77,7 +77,6 @@ main
     &:hover
       background-color: $button--hover-background-color
 .form
-  background-color: $fieldset-background-color
   box-sizing: border-box
   display: inline-flex
   flex-flow: row nowrap
@@ -139,6 +138,7 @@ main
       width: 80%
       .fieldset__li
         display: inline-flex
+        cursor: pointer
         margin: 2.5% 4%
         width: 46%
         &:nth-child( even )
@@ -146,10 +146,12 @@ main
         &:nth-child( odd )
           margin-left: 0
         .fieldset__label
+          cursor: pointer
           display: block
           position: relative
           width: 100%
           .fieldset__figure
+            cursor: pointer
             display: block
             margin: 0
             padding: 0
@@ -157,11 +159,13 @@ main
             width: 100%
             z-index: 0
             .fieldset__img
+              cursor: pointer
               width: 100%
             .fieldset__caption
               background-color: $fieldset__figcaption-background-color
               bottom: -1px
               color: $fieldset__figcaption-color
+              cursor: pointer
               display: block
               font: normal 10px/1.2em $Gotham-Light
               text-align: left
@@ -187,9 +191,6 @@ main
       flex-flow: row nowrap
       margin: 0
       padding: 0
-      &:inactive
-        background-color: $fieldset__next--inactive-background-color
-        color: $fieldset__next--active-color
       .button
         align-self: center
         border: 0 none transparent
@@ -198,6 +199,9 @@ main
         margin-top: 1%
         padding: 20px 25px
         width: 37%
+        &:disabled
+          background-color: $fieldset__next--inactive-background-color
+          color: $fieldset__next--active-color
         &:nth-child( odd )
           margin-left: 10%
           margin-right: 2.5%
@@ -222,17 +226,17 @@ main
             .fieldset__caption
               font: bold 13px/1.2em $Gotham-Bold
               text-align: center
-  .fieldset--inactive
-    display: none
   .fieldset--active
-    animation: .3s ease-in 0s 1 normal forwards running slideIn
+    animation: .5s ease .5s 1 normal forwards running slideIn
   .fieldset-down
     right: 0
     top: -100vh
   .fieldset--active-down
-    animation: .3s ease-in 0s 1 normal forwards running slideDown
+    animation: 1s ease-out 1s 1 normal forwards running slideDown
+.form--overlay
+  animation: 3s ease 0s 1 normal none running formInOut
 .form--active
-  animation: .1s ease-in 0s 1 normal forwards running formIn
+  animation: .1s ease 0s 1 normal forwards running formIn
 .results
   background-color: $result-background-color
   box-sizing: border-box
@@ -244,7 +248,7 @@ main
   right: -100vw
   top: 0
   width: 100vw
-  z-index: 3
+  z-index: 2
   .results__h3
     font: normal 20px/1.5em $Gotham-Bold
     margin: 10% 0 3%
@@ -285,7 +289,7 @@ main
       padding: 25px 15px
       width: 40%
 .results--active
-  animation: .3s ease-out 3s 1 normal forwards running resultsIn
+  animation: .5s ease-out 2s 1 normal forwards running resultsIn
 .footer__nav
   background-color: $footer__nav-background-color
   display: table
@@ -336,17 +340,22 @@ main
       border-right: 1px solid
       border: 0 none transparent
       .footer__background
-        animation: 1s ease 0s 1 normal forwards running fillFooter
+        animation: .5s ease 0s 1 normal forwards running fillFooter
       .footer__p
         color: $footer__p-color
 .footer__nav--active
-  animation: .3s ease-out 0s 1 normal forwards running footerIn
+  animation: .5s ease .5s 1 normal forwards running footerIn
 
 @keyframes formIn
   from
     z-index: 1
   to
     z-index: 2
+@keyframes formInOut
+  from
+    z-index: 1
+  to
+    z-index: 4
 @keyframes footerIn
   from
     bottom: -7%

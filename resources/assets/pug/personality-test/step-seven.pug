@@ -7,28 +7,28 @@ fieldset.fieldset.fieldset--inactive#care
           img(src="assets/img/7/pelo-compressor.png", alt="Perro siendo cepillado").fieldset__img
           figcaption.fieldset__caption.
             Me gustaría acariciarlo y cargarlo sin que tire tanto pelo
-        input(type="radio", name="size", value="fat_nor_thin").fieldset__radio#care__fat-nor-thin
+        input(type="radio", name="care", value="fat_nor_thin").fieldset__radio#care__fat-nor-thin
     li.fieldset__li
       label(for="care__thin").fieldset__label
         figure.fieldset__figure
           img(src="assets/img/7/nutrido-compressor.png", alt="Perro bien nutrido").fieldset__img
           figcaption.fieldset__caption.
             Creo que necesita verse mejor nutrido o más saludable
-        input(type="radio", name="size", value="thin").fieldset__radio#care__thin
+        input(type="radio", name="care", value="thin").fieldset__radio#care__thin
     li.fieldset__li
       label(for="care__muscular").fieldset__label
         figure.fieldset__figure
           img(src="assets/img/7/bano-compressor.png", alt="Perro haciendo del baño").fieldset__img
           figcaption.fieldset__caption.
             A veces le cuesta trabajo ir al baño, debo mejorar su digestión
-        input(type="radio", name="size", value="muscular").fieldset__radio#care__muscular
+        input(type="radio", name="care", value="muscular").fieldset__radio#care__muscular
     li.fieldset__li
       label(for="care__overweight").fieldset__label
         figure.fieldset__figure
           img(src="assets/img/7/energia-compressor.png", alt="Perro perezoso").fieldset__img
           figcaption.fieldset__caption.
             Quiero que baje de peso pero le falta energía para hacer más ejercicio
-        input(type="radio", name="size", value="overweight").fieldset__radio#size__overweight
+        input(type="radio", name="care", value="overweight").fieldset__radio#size__overweight
   ul.fieldset__buttons
     button.button.fieldset__cancel--active Cancelar
     button(disabled="disabled", data-section="results").button.fieldset__next.fieldset__next--inactive.last Siguiente

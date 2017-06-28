@@ -283,7 +283,6 @@ main {
       background-color: #0a6437; }
 
 .form {
-  background-color: #F7F6F3;
   box-sizing: border-box;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -358,6 +357,7 @@ main {
         display: -webkit-inline-box;
         display: -ms-inline-flexbox;
         display: inline-flex;
+        cursor: pointer;
         margin: 2.5% 4%;
         width: 46%; }
         .form .fieldset .fieldset__ul .fieldset__li:nth-child(even) {
@@ -365,10 +365,12 @@ main {
         .form .fieldset .fieldset__ul .fieldset__li:nth-child(odd) {
           margin-left: 0; }
         .form .fieldset .fieldset__ul .fieldset__li .fieldset__label {
+          cursor: pointer;
           display: block;
           position: relative;
           width: 100%; }
           .form .fieldset .fieldset__ul .fieldset__li .fieldset__label .fieldset__figure {
+            cursor: pointer;
             display: block;
             margin: 0;
             padding: 0;
@@ -376,11 +378,13 @@ main {
             width: 100%;
             z-index: 0; }
             .form .fieldset .fieldset__ul .fieldset__li .fieldset__label .fieldset__figure .fieldset__img {
+              cursor: pointer;
               width: 100%; }
             .form .fieldset .fieldset__ul .fieldset__li .fieldset__label .fieldset__figure .fieldset__caption {
               background-color: #009C49;
               bottom: -1px;
               color: #FFFFFF;
+              cursor: pointer;
               display: block;
               font: normal 10px/1.2em "GothamLight";
               text-align: left;
@@ -411,9 +415,6 @@ main {
               flex-flow: row nowrap;
       margin: 0;
       padding: 0; }
-      .form .fieldset .fieldset__buttons:inactive {
-        background-color: #DADBDB;
-        color: #FFFFFF; }
       .form .fieldset .fieldset__buttons .button {
         -ms-flex-item-align: center;
             -ms-grid-row-align: center;
@@ -424,6 +425,9 @@ main {
         margin-top: 1%;
         padding: 20px 25px;
         width: 37%; }
+        .form .fieldset .fieldset__buttons .button:disabled {
+          background-color: #DADBDB;
+          color: #FFFFFF; }
         .form .fieldset .fieldset__buttons .button:nth-child(odd) {
           margin-left: 10%;
           margin-right: 2.5%; }
@@ -443,21 +447,23 @@ main {
   .form .fieldset--intro .fieldset__ul .fieldset__li .fieldset__label .fieldset__figure .fieldset__caption {
     font: bold 13px/1.2em "GothamBold";
     text-align: center; }
-  .form .fieldset--inactive {
-    display: none; }
   .form .fieldset--active {
-    -webkit-animation: .3s ease-in 0s 1 normal forwards running slideIn;
-            animation: .3s ease-in 0s 1 normal forwards running slideIn; }
+    -webkit-animation: .5s ease .5s 1 normal forwards running slideIn;
+            animation: .5s ease .5s 1 normal forwards running slideIn; }
   .form .fieldset-down {
     right: 0;
     top: -100vh; }
   .form .fieldset--active-down {
-    -webkit-animation: .3s ease-in 0s 1 normal forwards running slideDown;
-            animation: .3s ease-in 0s 1 normal forwards running slideDown; }
+    -webkit-animation: 1s ease-out 1s 1 normal forwards running slideDown;
+            animation: 1s ease-out 1s 1 normal forwards running slideDown; }
+
+.form--overlay {
+  -webkit-animation: 3s ease 0s 1 normal none running formInOut;
+          animation: 3s ease 0s 1 normal none running formInOut; }
 
 .form--active {
-  -webkit-animation: .1s ease-in 0s 1 normal forwards running formIn;
-          animation: .1s ease-in 0s 1 normal forwards running formIn; }
+  -webkit-animation: .1s ease 0s 1 normal forwards running formIn;
+          animation: .1s ease 0s 1 normal forwards running formIn; }
 
 .results {
   background-color: #FFFFFF;
@@ -473,7 +479,7 @@ main {
   right: -100vw;
   top: 0;
   width: 100vw;
-  z-index: 3; }
+  z-index: 2; }
   .results .results__h3 {
     font: normal 20px/1.5em "GothamBold";
     margin: 10% 0 3%;
@@ -517,8 +523,8 @@ main {
       width: 40%; }
 
 .results--active {
-  -webkit-animation: .3s ease-out 3s 1 normal forwards running resultsIn;
-          animation: .3s ease-out 3s 1 normal forwards running resultsIn; }
+  -webkit-animation: .5s ease-out 2s 1 normal forwards running resultsIn;
+          animation: .5s ease-out 2s 1 normal forwards running resultsIn; }
 
 .footer__nav {
   background-color: #009B43;
@@ -582,14 +588,14 @@ main {
       border-right: 1px solid;
       border: 0 none transparent; }
       .footer__nav .footer__ul .footer__li--active .footer__background {
-        -webkit-animation: 1s ease 0s 1 normal forwards running fillFooter;
-                animation: 1s ease 0s 1 normal forwards running fillFooter; }
+        -webkit-animation: .5s ease 0s 1 normal forwards running fillFooter;
+                animation: .5s ease 0s 1 normal forwards running fillFooter; }
       .footer__nav .footer__ul .footer__li--active .footer__p {
         color: #FFFFFF; }
 
 .footer__nav--active {
-  -webkit-animation: .3s ease-out 0s 1 normal forwards running footerIn;
-          animation: .3s ease-out 0s 1 normal forwards running footerIn; }
+  -webkit-animation: .5s ease .5s 1 normal forwards running footerIn;
+          animation: .5s ease .5s 1 normal forwards running footerIn; }
 
 @-webkit-keyframes formIn {
   from {
@@ -602,6 +608,18 @@ main {
     z-index: 1; }
   to {
     z-index: 2; } }
+
+@-webkit-keyframes formInOut {
+  from {
+    z-index: 1; }
+  to {
+    z-index: 4; } }
+
+@keyframes formInOut {
+  from {
+    z-index: 1; }
+  to {
+    z-index: 4; } }
 
 @-webkit-keyframes footerIn {
   from {
