@@ -1,5 +1,6 @@
 ( function () {
   var $next_height              = document.getElementById( "next-height" ),
+      $header__nav              = document.getElementsByClassName( "header__nav" ),
       $form                     = document.getElementById( "form" ),
       $fieldset                 = document.getElementsByClassName( "fieldset" ),
       $fieldset__li             = document.getElementsByClassName( "fieldset__li" ),
@@ -12,6 +13,8 @@
     event.stopPropagation();
 
     $form.classList.add( "form--active" );
+
+    $header__nav[ 0 ].classList.add( "header__nav--active" );
 
     $fieldset[ 0 ].classList.add( "fieldset--active" );
 
@@ -46,7 +49,8 @@
 } )();
 
 $( function () {
-  var $form             = $( ".form" ),
+  var $header__nav      = $( ".header__nav" ),
+      $form             = $( ".form" ),
       $fieldset         = $( "fieldset" ),
       $fieldset__li     = $( ".fieldset__li" ),
       $fieldset__next   = $( ".fieldset__next" ),
@@ -62,13 +66,13 @@ $( function () {
     var $section            = "#" + $( event.currentTarget ).data( "section" ),
         $slideClassActive   = "fieldset--active";
 
-    counter++;
-
-    $footer__li.eq( counter ).addClass( "footer__li--active" );
-
     if ( $section == "#results" ) {
       $slideClassActive   = "results--active";
     }
+
+    counter++;
+
+    $footer__li.eq( counter ).addClass( "footer__li--active" );
 
     if ( $( event.currentTarget ).hasClass( "last" ) ) {
       $.ajax( {
@@ -136,8 +140,12 @@ $( function () {
 
   function restartForm ( ) {
     counter = 0;
+
+    $header__nav.removeClass( "header__nav--active" );
+    $header__nav.eq( 0 ).addClass( "header__nav--active" );
+
     document.getElementsByTagName( "form" )[ 0 ].clear;
-    $form.addClass( "form--active form--overlay" );
+    $form.addClass( "form--overlay" );
 
     $fieldset.removeClass( "fieldset--active fieldset-down fieldset--active-down" );
     $fieldset.eq( 0 ).addClass( "fieldset-down fieldset--active-down" );
@@ -152,7 +160,8 @@ $( function () {
 
     setTimeout( function () {
       $results.removeClass( "results--active" );
-      // $form.removeClass( "form--overlay" );
+      $form.addClass( "form--active " );
+      $form.removeClass( "form--overlay" );
     }, 3000 );
   }
 } );

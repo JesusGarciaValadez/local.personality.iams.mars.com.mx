@@ -27,9 +27,6 @@ main
     width: 30% // 6.25em
     margin: 0.625em 1.25em
   .header__nav
-  .header__nav--active
-    display: block
-  .header__nav--inactive
     display: none
 .section, .form, .results
   display: table
@@ -75,7 +72,7 @@ main
     left: 50%
     transform: translate( -50%, 0 )
     &:hover
-      background-color: $button--hover-background-color
+      background-color: $section__a--hover-color
 .form
   box-sizing: border-box
   display: inline-flex
@@ -227,14 +224,14 @@ main
               font: bold 13px/1.2em $Gotham-Bold
               text-align: center
   .fieldset--active
-    animation: .5s ease .5s 1 normal forwards running slideIn
+    animation: .5s ease 0s 1 normal forwards running slideIn
   .fieldset-down
     right: 0
     top: -100vh
   .fieldset--active-down
     animation: 1s ease-out 1s 1 normal forwards running slideDown
 .form--overlay
-  animation: 3s ease 0s 1 normal none running formInOut
+  animation: 3s ease 0s 1 normal both running formInOut
 .form--active
   animation: .1s ease 0s 1 normal forwards running formIn
 .results
@@ -289,7 +286,7 @@ main
       padding: 25px 15px
       width: 40%
 .results--active
-  animation: .5s ease-out 2s 1 normal forwards running resultsIn
+  animation: .5s ease-out 2s 1 normal both running resultsIn
 .footer__nav
   background-color: $footer__nav-background-color
   display: table
@@ -345,44 +342,3 @@ main
         color: $footer__p-color
 .footer__nav--active
   animation: .5s ease .5s 1 normal forwards running footerIn
-
-@keyframes formIn
-  from
-    z-index: 1
-  to
-    z-index: 2
-@keyframes formInOut
-  from
-    z-index: 1
-  to
-    z-index: 4
-@keyframes footerIn
-  from
-    bottom: -7%
-  to
-    bottom: 0
-@keyframes slideIn
-  from
-    right: -100vw
-  to
-    right: 0vw
-@keyframes slideOut
-  from
-    right: 0vw
-  to
-    right: -100vw
-@keyframes slideDown
-  from
-    top: -100vh
-  to
-    top: 7vh
-@keyframes resultsIn
-  from
-    right: -100vw
-  to
-    right: 0vw
-@keyframes fillFooter
-  from
-    width: 0%
-  to
-    width: 100%
