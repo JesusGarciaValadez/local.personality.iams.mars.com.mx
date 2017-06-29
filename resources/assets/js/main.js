@@ -49,7 +49,7 @@
 } )();
 
 $( function () {
-  var $header__nav      = $( ".header__nav" ),
+  var $header__li      = $( ".header__li" ),
       $form             = $( ".form" ),
       $fieldset         = $( "fieldset" ),
       $fieldset__li     = $( ".fieldset__li" ),
@@ -72,6 +72,7 @@ $( function () {
 
     counter++;
 
+    $header__li.eq( counter ).addClass( "header__li--active" );
     $footer__li.eq( counter ).addClass( "footer__li--active" );
 
     if ( $( event.currentTarget ).hasClass( "last" ) ) {
@@ -141,8 +142,8 @@ $( function () {
   function restartForm ( ) {
     counter = 0;
 
-    $header__nav.removeClass( "header__nav--active" );
-    $header__nav.eq( 0 ).addClass( "header__nav--active" );
+    $header__li.removeClass( "header__li--active" );
+    $header__li.eq( 0 ).addClass( "header__li--active" );
 
     document.getElementsByTagName( "form" )[ 0 ].clear;
     $form.addClass( "form--overlay" );

@@ -69,7 +69,7 @@ html, body, main
         border: 0 none transparent
         border-bottom: 5px solid $header__li-border-color
         .header__background
-          animation: .5s ease 0s 1 normal forwards running fillFooter
+          //animation: .5s ease 0s 1 normal forwards running fillFooter
         .header__p
           color: $header__p-color
   .header__nav--active
@@ -109,7 +109,7 @@ html, body, main
     transform: translate( -50%, 0 )
 .form
   padding: 7.7% 0 0
-  right: 2.05vw;
+  right: 0;
   .fieldset
     align-items: center
     display: flex
@@ -125,22 +125,25 @@ html, body, main
       .fieldset__legend
         font-size: 2.45em
         left: 4%
-        top: 95%
+        transform: translate( 0, -50% )
+        top: 50%
     .fieldset__ul
-      margin: 5.625em // 90px
+      margin: 5.625em auto // 90px
+      width: 95%
       .fieldset__li
-        margin: 0 4% !important
-        width: 25%
+        width: 22%
+        &:nth-child( odd ), &:nth-child( even )
+          margin: 0 2%
+        &:first-child
+          margin-left: 0
+        &:last-child
+          margin-right: 0
         .fieldset__label
           .fieldset__figure
             .fieldset__img
             .fieldset__caption
               font-size: 1em // 16px
           .fieldset__radio
-  .fieldset--intro
-    .fieldset__ul
-      .fieldset__li
-        width: 25%
     .fieldset__buttons
       align-items: center
       display: flex
@@ -158,23 +161,76 @@ html, body, main
         width: 9.625em
       .fieldset__cancel--active
       .fieldset__next--inactive
+  .fieldset--intro
+    .fieldset__ul
+      .fieldset__li
+        width: 30%
 .form--overlay
   animation: 3s ease 0s 1 normal both running formInOut
 .form--active
   animation: .1s ease 0s 1 normal forwards running formIn
 .results
+  background-color: $background-color
+  padding: 10% 2%
   .title.results__h3
+    font-size: 2.5em // 40px
+    font-weight: bold
+    line-height: 1em // 100px
+    margin: 1.75em 0 1em // 70px 0 40px 0
+    padding: 0
   .results__wrapper
+    align-items: center
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-start
     .results__div--left
-      .dog.results__img
+      align-self: flex-start
+      display: block
+      height: 380px
+      overflow: hidden
+      width: 40%
+      .results__img#dog-img
+        height: 100%
+        left: 50%
+        position: relative
+        transform: translate( -50%, 0 )
+        width: auto
     .results__div--right
+      align-items: center
+      background-color: $result-background-color
+      box-sizing: border-box
+      display: flex
+      flex-flow: column nowrap
+      height: 100%
+      justify-content: center
+      padding: 30px 0 30px 50px
+      position: relative
+      width: 58%
       .results__h3
+        align-self: flex-start
+        font-size: 30px
+        line-height: 1em
+        margin: 0
       .results__p
-      .results__div
-        .product.results__img
-    .button.results__clear
-  .footer
-    display: none
+        font-size: 16px
+        margin-left: 0
+        margin-right: 0
+        width: 70%
+      .results__img#product-img
+        margin: 0
+        position: absolute
+        right: -5.5%
+        top: 23%
+        width: 28%
+    .results__p
+      width: 100%
+      .results__clear
+        font-size: 1.125em // 18px;
+        margin: 2.7777777778em auto // 50px auto
+        padding: 1.6666666667em 1.1111111111em // 30px 20px;
+        width: 16%;
+.footer
+  display: none
 .results--active
   animation: .5s ease-out 2s 1 normal both running resultsIn
 .footer__nav
