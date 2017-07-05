@@ -307,6 +307,58 @@ textarea {
   to {
     width: 100%; } }
 
+@-webkit-keyframes showOverlay {
+  from {
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    top: 50%; }
+  to {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0; } }
+
+@keyframes showOverlay {
+  from {
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    top: 50%; }
+  to {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0; } }
+
+@-webkit-keyframes animateCircles {
+  0% {
+    background-color: #9B9B99;
+    height: 20px;
+    width: 20px; }
+  70% {
+    background-color: #41974F;
+    height: 30px;
+    width: 30px; }
+  100% {
+    background-color: #41974F;
+    height: 28px;
+    width: 28px; } }
+
+@keyframes animateCircles {
+  0% {
+    background-color: #9B9B99;
+    height: 20px;
+    width: 20px; }
+  70% {
+    background-color: #41974F;
+    height: 30px;
+    width: 30px; }
+  100% {
+    background-color: #41974F;
+    height: 28px;
+    width: 28px; } }
+
 /* animation: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name */
 html, body, main {
   background-color: #F7F6F3;
@@ -346,7 +398,7 @@ main {
 
 .section {
   background: url("../img/background.png") 40% bottom transparent;
-  background-size: auto 100%;
+  background-size: cover;
   height: 93vh;
   position: absolute;
   width: 100vw;
@@ -570,6 +622,105 @@ main {
 .form--active {
   -webkit-animation: .1s ease 0s 1 normal forwards running formIn;
           animation: .1s ease 0s 1 normal forwards running formIn; }
+
+.overlay {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  left: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  z-index: 2; }
+  .overlay .modal {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 10px;
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 50px; }
+    .overlay .modal .modal__ul {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin: 0;
+      padding: 0;
+      width: 50%; }
+      .overlay .modal .modal__ul .modal__li {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        height: 30px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin: 10px;
+        width: 30px; }
+        .overlay .modal .modal__ul .modal__li:nth-child(1) .modal__span {
+          -webkit-animation: 1.3s ease 0s infinite alternate none running animateCircles;
+                  animation: 1.3s ease 0s infinite alternate none running animateCircles; }
+        .overlay .modal .modal__ul .modal__li:nth-child(2) .modal__span {
+          -webkit-animation: 1.3s ease 0s infinite alternate-reverse none running animateCircles;
+                  animation: 1.3s ease 0s infinite alternate-reverse none running animateCircles; }
+        .overlay .modal .modal__ul .modal__li:nth-child(3) .modal__span {
+          -webkit-animation: 1.3s ease 0s infinite alternate none running animateCircles;
+                  animation: 1.3s ease 0s infinite alternate none running animateCircles; }
+        .overlay .modal .modal__ul .modal__li:nth-child(4) .modal__span {
+          -webkit-animation: 1.3s ease 0s infinite alternate-reverse none running animateCircles;
+                  animation: 1.3s ease 0s infinite alternate-reverse none running animateCircles; }
+        .overlay .modal .modal__ul .modal__li .modal__span {
+          background-color: #9B9B99;
+          border-radius: 50%;
+          height: 20px;
+          width: 20px; }
+    .overlay .modal .modal__p {
+      color: #9B9B99;
+      font: normal 1em/1.2em "GothamBook";
+      text-align: center;
+      text-transform: uppercase;
+      width: 500px; }
+
+.overlay--active {
+  -webkit-animation: .5s ease-out 0s 1 normal both running showOverlay;
+          animation: .5s ease-out 0s 1 normal both running showOverlay; }
+  .overlay--active .modal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 .results {
   background-color: #FFFFFF;
@@ -875,8 +1026,7 @@ main {
       -webkit-animation: .5s ease 0s 1 normal forwards running headerIn;
               animation: .5s ease 0s 1 normal forwards running headerIn; }
   .section {
-    background-position: left top;
-    background-size: auto 100%; }
+    background-position: left top; }
     .section .section__div {
       position: absolute;
       right: 3.75em;

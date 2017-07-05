@@ -32,7 +32,7 @@ main
   display: table
 .section
   background: url( "../img/background.png" ) 40% bottom transparent
-  background-size: auto 100%
+  background-size: cover
   height: 93vh
   position: absolute
   width: 100vw
@@ -234,6 +234,66 @@ main
   animation: 3s ease 0s 1 normal both running formInOut
 .form--active
   animation: .1s ease 0s 1 normal forwards running formIn
+.overlay
+  align-items: center
+  background-color: $overlay-background-color
+  display: flex
+  flex-flow: column nowrap
+  left: 0
+  justify-content: center
+  position: absolute
+  top: 0
+  z-index: 2
+  .modal
+    align-items: center
+    border-radius: 10px
+    display: none
+    flex-flow: row wrap
+    justify-content: center
+    padding: 50px
+    .modal__ul
+      align-items: center
+      display: flex
+      flex-flow: row nowrap
+      justify-content: center
+      margin: 0
+      padding: 0
+      width: 50%
+      .modal__li
+        align-items: center
+        display: flex
+        flex-flow: row wrap
+        height: 30px
+        justify-content: center
+        margin: 10px
+        width: 30px
+        &:nth-child( 1 )
+          .modal__span
+            animation: 1.3s ease 0s infinite alternate none running animateCircles
+        &:nth-child( 2 )
+          .modal__span
+            animation: 1.3s ease 0s infinite alternate-reverse none running animateCircles
+        &:nth-child( 3 )
+          .modal__span
+            animation: 1.3s ease 0s infinite alternate none running animateCircles
+        &:nth-child( 4 )
+          .modal__span
+            animation: 1.3s ease 0s infinite alternate-reverse none running animateCircles
+        .modal__span
+          background-color: $modal__li-background-color
+          border-radius: 50%
+          height: 20px
+          width: 20px
+    .modal__p
+      color: $modal__p-color
+      font: normal 1em/1.2em $Gotham-Book
+      text-align: center
+      text-transform: uppercase
+      width: 500px
+.overlay--active
+  animation: .5s ease-out 0s 1 normal both running showOverlay
+  .modal
+    display: flex
 .results
   background-color: $result-background-color
   box-sizing: border-box

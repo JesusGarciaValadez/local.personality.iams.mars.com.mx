@@ -1,13 +1,7 @@
 extends layout/layout.pug
 
 block content
-  section.section
-    div.section__div
-      img(src="assets/img/pleca-test.png", alt="Test").section__img
-      img(src="assets/img/IAMS-logo.png", alt="IAMS").section__img-logo
-      h1.section__h1.
-        Descubre la <br />#[strong.section__strong personalidad] <br />#[span.section__span de tu perro]
-      button(data-section="height").button.section__a#next-height Comenzar
+  include personality-test/section.pug
   form(action="action.php", method="POST").form#form
     include personality-test/step-one.pug
     include personality-test/step-two.pug
@@ -16,6 +10,7 @@ block content
     include personality-test/step-five.pug
     include personality-test/step-six.pug
     include personality-test/step-seven.pug
+  include personality-test/overlay.pug
   include personality-test/results.pug
 
   include layout/footer.pug
