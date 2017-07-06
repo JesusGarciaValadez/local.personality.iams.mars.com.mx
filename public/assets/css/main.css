@@ -996,10 +996,12 @@ main {
         -webkit-transform: translate(0, -50%);
                 transform: translate(0, -50%);
         top: 50%; }
-    .form .fieldset .fieldset__ul .fieldset__li {
-      width: 31.2075983718vw; }
-      .form .fieldset .fieldset__ul .fieldset__li .fieldset__label .fieldset__figure .fieldset__caption {
-        font-size: 15px; }
+    .form .fieldset .fieldset__ul {
+      width: 68%; }
+      .form .fieldset .fieldset__ul .fieldset__li {
+        width: 31.2075983718vw; }
+        .form .fieldset .fieldset__ul .fieldset__li .fieldset__label .fieldset__figure .fieldset__caption {
+          font-size: 15px; }
   .results .results__h3 {
     margin: 3% 0; }
   .results .results__wrapper .results__div--right .results__p {
