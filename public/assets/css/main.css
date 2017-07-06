@@ -275,13 +275,13 @@ textarea {
   from {
     top: -100vh; }
   to {
-    top: 7vh; } }
+    top: 0vh; } }
 
 @keyframes slideDown {
   from {
     top: -100vh; }
   to {
-    top: 7vh; } }
+    top: 0vh; } }
 
 @-webkit-keyframes resultsIn {
   from {
@@ -308,24 +308,34 @@ textarea {
     width: 100%; } }
 
 @-webkit-keyframes showOverlay {
-  from {
+  0% {
     bottom: 50%;
     left: 50%;
     right: 50%;
     top: 50%; }
-  to {
+  50% {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0; }
+  100% {
     bottom: 0;
     left: 0;
     right: 0;
     top: 0; } }
 
 @keyframes showOverlay {
-  from {
+  0% {
     bottom: 50%;
     left: 50%;
     right: 50%;
     top: 50%; }
-  to {
+  50% {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0; }
+  100% {
     bottom: 0;
     left: 0;
     right: 0;
@@ -404,15 +414,17 @@ main {
   width: 100vw;
   z-index: 2; }
   .section .section__img {
+    max-width: 253px;
     position: absolute;
     top: 1%;
     right: 0;
-    width: 40%; }
+    width: 50%; }
   .section .section__img-logo {
     display: block;
-    margin: 75px auto 0.625em;
+    margin: 39.0625vw auto 0.625em;
+    max-width: 284px;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
-    width: 35%; }
+    width: 60%; }
   .section .section__h1 {
     color: #FFFFFF;
     font: 300 1.25em/1.2em "GothamLight";
@@ -449,8 +461,8 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  height: 100.3vh;
-  padding: 13% 0 0;
+  height: 100vh;
+  padding: 46 0 0;
   position: absolute;
   right: 0vw;
   top: 0;
@@ -460,9 +472,9 @@ main {
     background-color: #F7F6F3;
     box-sizing: border-box;
     height: 100vh;
-    padding-bottom: 12.6%;
+    padding: 13.125vw 0 12.6%;
     position: absolute;
-    top: 12vw;
+    top: 0;
     right: -100vw;
     width: 100vw; }
     .form .fieldset:nth-child(1) {
@@ -517,7 +529,7 @@ main {
         display: inline-flex;
         cursor: pointer;
         margin: 2.5% 4%;
-        width: 46%; }
+        width: 36.5625vw; }
         .form .fieldset .fieldset__ul .fieldset__li:nth-child(even) {
           margin-right: 0; }
         .form .fieldset .fieldset__ul .fieldset__li:nth-child(odd) {
@@ -540,13 +552,12 @@ main {
               width: 100%; }
             .form .fieldset .fieldset__ul .fieldset__li .fieldset__label .fieldset__figure .fieldset__caption {
               background-color: #009C49;
-              bottom: -1px;
               color: #FFFFFF;
               cursor: pointer;
               display: block;
-              font: normal 10px/1.2em "GothamLight";
+              font: normal 9px/1.2em "GothamLight";
               text-align: left;
-              padding: 15px 10px;
+              padding: 10px;
               position: relative; }
           .form .fieldset .fieldset__ul .fieldset__li .fieldset__label .fieldset__radio {
             display: block;
@@ -571,8 +582,9 @@ main {
       -webkit-box-direction: normal;
           -ms-flex-flow: row nowrap;
               flex-flow: row nowrap;
-      margin: 0;
-      padding: 0; }
+      margin: 0 auto;
+      padding: 0;
+      width: 240px; }
       .form .fieldset .fieldset__buttons .button {
         -ms-flex-item-align: center;
             -ms-grid-row-align: center;
@@ -582,16 +594,16 @@ main {
         font: normal 11px/0 "GothamBold";
         margin-top: 1%;
         padding: 20px 25px;
-        width: 37%; }
+        width: 118px; }
         .form .fieldset .fieldset__buttons .button:disabled {
           background-color: #DADBDB;
           color: #FFFFFF; }
         .form .fieldset .fieldset__buttons .button:nth-child(odd) {
-          margin-left: 10%;
-          margin-right: 2.5%; }
+          margin-left: 0;
+          margin-right: 5%; }
         .form .fieldset .fieldset__buttons .button:nth-child(even) {
-          margin-right: 10%;
-          margin-left: 2.5%; }
+          margin-right: 5%;
+          margin-left: 0; }
       .form .fieldset .fieldset__buttons .fieldset__cancel--active {
         background-color: transparent;
         border: 2px solid #76C7A0;
@@ -610,7 +622,7 @@ main {
             animation: .5s ease 0s 1 normal forwards running slideIn; }
   .form .fieldset-down {
     right: 0;
-    top: -100vh; }
+    top: 0vh; }
   .form .fieldset--active-down {
     -webkit-animation: 1s ease-out 1s 1 normal forwards running slideDown;
             animation: 1s ease-out 1s 1 normal forwards running slideDown; }
@@ -690,18 +702,22 @@ main {
                 justify-content: center;
         margin: 10px;
         width: 30px; }
+        .overlay .modal .modal__ul .modal__li .modal__span {
+          background-color: #9B9B99;
+          height: 20px;
+          width: 20px; }
         .overlay .modal .modal__ul .modal__li:nth-child(1) .modal__span {
-          -webkit-animation: 1.3s ease 0s infinite alternate none running animateCircles;
-                  animation: 1.3s ease 0s infinite alternate none running animateCircles; }
+          -webkit-animation: 1.3s ease 2s infinite alternate-reverse none running animateCircles;
+                  animation: 1.3s ease 2s infinite alternate-reverse none running animateCircles; }
         .overlay .modal .modal__ul .modal__li:nth-child(2) .modal__span {
-          -webkit-animation: 1.3s ease 0s infinite alternate-reverse none running animateCircles;
-                  animation: 1.3s ease 0s infinite alternate-reverse none running animateCircles; }
+          -webkit-animation: 1.3s ease 4s infinite alternate-reverse none running animateCircles;
+                  animation: 1.3s ease 4s infinite alternate-reverse none running animateCircles; }
         .overlay .modal .modal__ul .modal__li:nth-child(3) .modal__span {
-          -webkit-animation: 1.3s ease 0s infinite alternate none running animateCircles;
-                  animation: 1.3s ease 0s infinite alternate none running animateCircles; }
+          -webkit-animation: 1.3s ease 6s infinite alternate-reverse none running animateCircles;
+                  animation: 1.3s ease 6s infinite alternate-reverse none running animateCircles; }
         .overlay .modal .modal__ul .modal__li:nth-child(4) .modal__span {
-          -webkit-animation: 1.3s ease 0s infinite alternate-reverse none running animateCircles;
-                  animation: 1.3s ease 0s infinite alternate-reverse none running animateCircles; }
+          -webkit-animation: 1.3s ease 8s infinite alternate-reverse none running animateCircles;
+                  animation: 1.3s ease 8s infinite alternate-reverse none running animateCircles; }
         .overlay .modal .modal__ul .modal__li .modal__span {
           background-color: #9B9B99;
           border-radius: 50%;
@@ -710,9 +726,10 @@ main {
     .overlay .modal .modal__p {
       color: #9B9B99;
       font: normal 1em/1.2em "GothamBook";
+      max-width: 500px;
       text-align: center;
       text-transform: uppercase;
-      width: 500px; }
+      width: 75%; }
 
 .overlay--active {
   -webkit-animation: .5s ease-out 0s 1 normal both running showOverlay;
@@ -723,7 +740,7 @@ main {
     display: flex; }
 
 .results {
-  background-color: #FFFFFF;
+  background-color: #F7F6F3;
   box-sizing: border-box;
   display: block;
   -webkit-box-orient: horizontal;
@@ -742,42 +759,48 @@ main {
     margin: 10% 0 3%;
     text-transform: uppercase; }
   .results .results__wrapper {
+    background-color: #FFFFFF;
     box-sizing: border-box; }
     .results .results__wrapper .results__div--left {
       width: 100%; }
       .results .results__wrapper .results__div--left .results__img#dog-img {
         width: 100%; }
     .results .results__wrapper .results__div--right {
+      margin: 3% 5%;
+      position: relative;
       width: 100%; }
       .results .results__wrapper .results__div--right .results__h3 {
-        font: normal 18px/1em "GothamBold";
-        margin: 5% 0 0;
+        font: normal 17px/1em "GothamBold";
+        margin: 0;
         text-transform: uppercase; }
       .results .results__wrapper .results__div--right .results__p {
         display: inline;
         float: left;
-        font: normal 11px/1.2em "GothamLight";
-        margin: 3% 0 3% 5%;
-        width: 59%; }
+        font: normal 10px/1.2em "GothamLight";
+        width: 72%; }
+        .results .results__wrapper .results__div--right .results__p:nth-child(2) {
+          width: 69%; }
       .results .results__wrapper .results__div--right .results__img#product-img {
-        float: right;
-        margin: -35% 0 0;
-        padding: 0;
+        bottom: -20px;
+        right: -5px;
+        position: absolute;
         width: 30%; }
-    .results .results__wrapper .results__clear {
-      -ms-flex-item-align: center;
-          -ms-grid-row-align: center;
-          align-self: center;
-      background-color: #009B43;
-      border: 0 none transparent;
-      border-radius: 20px;
-      clear: both;
-      color: #FFFFFF;
-      display: block;
-      font: normal 11px/0 "GothamBold";
-      margin: 1% auto;
-      padding: 25px 15px;
-      width: 40%; }
+    .results .results__wrapper > .results__p {
+      margin: 0; }
+      .results .results__wrapper > .results__p .results__clear {
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
+        background-color: #009B43;
+        border: 0 none transparent;
+        border-radius: 20px;
+        clear: both;
+        color: #FFFFFF;
+        display: block;
+        font: normal 11px/0 "GothamBold";
+        margin: 0 auto;
+        padding: 25px 15px;
+        width: 40%; }
 
 .results--active {
   -webkit-animation: .5s ease-out 2s 1 normal both running resultsIn;
@@ -816,6 +839,19 @@ main {
       height: 100%;
       width: 12.5%; }
     .footer__nav .footer__ul .footer__li {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       position: relative; }
       .footer__nav .footer__ul .footer__li .footer__background {
         background-color: #008A42;
@@ -833,13 +869,18 @@ main {
         display: inline-block;
         font: normal 11px/1.5em "GothamBold";
         margin: 0;
-        padding-left: 18px;
         position: relative;
         text-transform: uppercase;
         z-index: 1; }
         .footer__nav .footer__ul .footer__li .footer__p .footer__a {
           color: inherit;
           text-decoration: none; }
+        .footer__nav .footer__ul .footer__li .footer__p .footer__span {
+          background: url("../img/huella-verde.png") no-repeat center center transparent;
+          display: block;
+          height: 30px;
+          margin: auto;
+          width: 30px; }
     .footer__nav .footer__ul .footer__li--active {
       background-color: transparent;
       border-right: 1px solid;
@@ -849,6 +890,8 @@ main {
                 animation: .5s ease 0s 1 normal forwards running fillFooter; }
       .footer__nav .footer__ul .footer__li--active .footer__p {
         color: #FFFFFF; }
+        .footer__nav .footer__ul .footer__li--active .footer__p .footer__span {
+          background: url("../img/huella-blanca.png") no-repeat center center transparent; }
 
 .footer__nav--active {
   -webkit-animation: .5s ease .5s 1 normal forwards running footerIn;
@@ -1170,7 +1213,7 @@ main {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        background-color: #FFFFFF;
+        background-color: #F7F6F3;
         box-sizing: border-box;
         display: -webkit-box;
         display: -ms-flexbox;

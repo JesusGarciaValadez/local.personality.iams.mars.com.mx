@@ -53,11 +53,20 @@ $( function () {
       $form             = $( ".form" ),
       $fieldset         = $( "fieldset" ),
       $fieldset__li     = $( ".fieldset__li" ),
+      $fieldset__cancel = $( ".fieldset__cancel" ),
       $fieldset__next   = $( ".fieldset__next" ),
+      $overlay          = $( ".overlay" ),
       $results          = $( ".results" ),
       $results__clear   = $( ".results__clear" ),
       $footer__li       = $( ".footer__li" ),
       counter           = 0;
+
+  $fieldset__cancel.on( 'click', function ( event ) {
+    event.stopPropagation();
+    event.preventDefault();
+
+    restartForm();
+  } );
 
   $fieldset__next.on( 'click', function ( event ) {
     event.preventDefault();
@@ -76,6 +85,8 @@ $( function () {
     $footer__li.eq( counter ).addClass( "footer__li--active" );
 
     if ( $( event.currentTarget ).hasClass( "last" ) ) {
+      $overlay.addClass( "overlay--active" );
+
       $.ajax( {
         url: "assets/js/response.min.json",
         method: "POST",
@@ -122,6 +133,7 @@ $( function () {
         $product_img.attr( "src", productImg );
         $product_img.attr( "alt", productImg );
 
+        $overlay.removeClass( "overlay--active" );
         $( $section ).addClass( $slideClassActive );
         setTimeout( function () {
           $form.removeClass( "form--active" );

@@ -39,15 +39,17 @@ main
   z-index: 2
   .section__div
   .section__img
+    max-width: 253px
     position: absolute
     top: 1%
     right: 0
-    width: 40%
+    width: 50%
   .section__img-logo
     display: block;
-    margin: 75px auto 0.625em
+    margin: 39.0625vw auto 0.625em
+    max-width: 284px
     text-shadow: 5px 5px 5px rgba(0,0,0,0.7)
-    width: 35%;
+    width: 60%
   .section__h1
     color: $mobile-section__h1-color
     font: 300 1.25em/1.2em $Gotham-Light
@@ -77,8 +79,8 @@ main
   box-sizing: border-box
   display: inline-flex
   flex-flow: row nowrap
-  height: 100.3vh
-  padding: 13% 0 0
+  height: 100vh
+  padding: 46 0 0
   position: absolute
   right: 0vw
   top: 0
@@ -88,9 +90,9 @@ main
     background-color: $fieldset-background-color
     box-sizing: border-box
     height: 100vh
-    padding-bottom: 12.6%
+    padding: 13.125vw 0 12.6%
     position: absolute
-    top: 12vw
+    top: 0
     right: -100vw
     width: 100vw
     &:nth-child( 1 )
@@ -137,7 +139,7 @@ main
         display: inline-flex
         cursor: pointer
         margin: 2.5% 4%
-        width: 46%
+        width: 36.5625vw
         &:nth-child( even )
           margin-right: 0
         &:nth-child( odd )
@@ -160,13 +162,12 @@ main
               width: 100%
             .fieldset__caption
               background-color: $fieldset__figcaption-background-color
-              bottom: -1px
               color: $fieldset__figcaption-color
               cursor: pointer
               display: block
-              font: normal 10px/1.2em $Gotham-Light
+              font: normal 9px/1.2em $Gotham-Light
               text-align: left
-              padding: 15px 10px
+              padding: 10px
               position: relative
           .fieldset__radio
             display: block
@@ -186,8 +187,9 @@ main
     .fieldset__buttons
       display: flex
       flex-flow: row nowrap
-      margin: 0
+      margin: 0 auto
       padding: 0
+      width: 240px
       .button
         align-self: center
         border: 0 none transparent
@@ -195,16 +197,16 @@ main
         font: normal 11px/0 $Gotham-Bold
         margin-top: 1%
         padding: 20px 25px
-        width: 37%
+        width: 118px
         &:disabled
           background-color: $fieldset__next--inactive-background-color
           color: $fieldset__next--active-color
         &:nth-child( odd )
-          margin-left: 10%
-          margin-right: 2.5%
+          margin-left: 0
+          margin-right: 5%
         &:nth-child( even )
-          margin-right: 10%
-          margin-left: 2.5%
+          margin-right: 5%
+          margin-left: 0
       .fieldset__cancel--active
         background-color: transparent
         border: 2px solid $fieldset__cancel--active-border-color
@@ -227,7 +229,7 @@ main
     animation: .5s ease 0s 1 normal forwards running slideIn
   .fieldset-down
     right: 0
-    top: -100vh
+    top: 0vh
   .fieldset--active-down
     animation: 1s ease-out 1s 1 normal forwards running slideDown
 .form--overlay
@@ -267,18 +269,22 @@ main
         justify-content: center
         margin: 10px
         width: 30px
+        .modal__span
+          background-color: $modal__li-background-color
+          height: 20px
+          width: 20px
         &:nth-child( 1 )
           .modal__span
-            animation: 1.3s ease 0s infinite alternate none running animateCircles
+            animation: 1.3s ease 2s infinite alternate-reverse none running animateCircles
         &:nth-child( 2 )
           .modal__span
-            animation: 1.3s ease 0s infinite alternate-reverse none running animateCircles
+            animation: 1.3s ease 4s infinite alternate-reverse none running animateCircles
         &:nth-child( 3 )
           .modal__span
-            animation: 1.3s ease 0s infinite alternate none running animateCircles
+            animation: 1.3s ease 6s infinite alternate-reverse none running animateCircles
         &:nth-child( 4 )
           .modal__span
-            animation: 1.3s ease 0s infinite alternate-reverse none running animateCircles
+            animation: 1.3s ease 8s infinite alternate-reverse none running animateCircles
         .modal__span
           background-color: $modal__li-background-color
           border-radius: 50%
@@ -287,15 +293,16 @@ main
     .modal__p
       color: $modal__p-color
       font: normal 1em/1.2em $Gotham-Book
+      max-width: 500px
       text-align: center
       text-transform: uppercase
-      width: 500px
+      width: 75%
 .overlay--active
   animation: .5s ease-out 0s 1 normal both running showOverlay
   .modal
     display: flex
 .results
-  background-color: $result-background-color
+  background-color: $results-background-color
   box-sizing: border-box
   display: block
   flex-flow: row nowrap
@@ -311,40 +318,46 @@ main
     margin: 10% 0 3%
     text-transform: uppercase
   .results__wrapper
+    background-color: $results__wrapper-background-color
     box-sizing: border-box
     .results__div--left
       width: 100%
       .results__img#dog-img
         width: 100%
     .results__div--right
+      margin: 3% 5%
+      position: relative
       width: 100%
       .results__h3
-        font: normal 18px/1em $Gotham-Bold
-        margin: 5% 0 0
+        font: normal 17px/1em $Gotham-Bold
+        margin: 0
         text-transform: uppercase
       .results__p
         display: inline
         float: left
-        font: normal 11px/1.2em $Gotham-Light
-        margin: 3% 0 3% 5%
-        width: 59%
+        font: normal 10px/1.2em $Gotham-Light
+        width: 72%
+        &:nth-child( 2 )
+          width: 69%
       .results__img#product-img
-        float: right
-        margin: -35% 0 0
-        padding: 0
+        bottom: -20px
+        right: -5px
+        position: absolute
         width: 30%
-    .results__clear
-      align-self: center
-      background-color: $fieldset__next--active-background-color
-      border: 0 none transparent
-      border-radius: 20px
-      clear: both
-      color: $fieldset__next--active-color
-      display: block
-      font: normal 11px/0 $Gotham-Bold
-      margin: 1% auto
-      padding: 25px 15px
-      width: 40%
+    > .results__p
+      margin: 0
+      .results__clear
+        align-self: center
+        background-color: $fieldset__next--active-background-color
+        border: 0 none transparent
+        border-radius: 20px
+        clear: both
+        color: $fieldset__next--active-color
+        display: block
+        font: normal 11px/0 $Gotham-Bold
+        margin: 0 auto
+        padding: 25px 15px
+        width: 40%
 .results--active
   animation: .5s ease-out 2s 1 normal both running resultsIn
 .footer__nav
@@ -370,6 +383,10 @@ main
       height: 100%
       width: 12.5%
     .footer__li
+      align-items: center
+      display: flex
+      flex-flow: row wrap
+      justify-content: center
       position: relative
       .footer__background
         background-color: $footer__li--inactive-color
@@ -385,13 +402,18 @@ main
         display: inline-block
         font: normal 11px/1.5em $Gotham-Bold
         margin: 0
-        padding-left: 18px
         position: relative
         text-transform: uppercase
         z-index: 1
         .footer__a
           color: inherit
           text-decoration: none
+        .footer__span
+          background: url( "../img/huella-verde.png" ) no-repeat center center transparent
+          display: block
+          height: 30px
+          margin: auto
+          width: 30px
     .footer__li--active
       background-color: transparent
       border-right: 1px solid
@@ -400,5 +422,7 @@ main
         animation: .5s ease 0s 1 normal forwards running fillFooter
       .footer__p
         color: $footer__p-color
+        .footer__span
+          background: url( "../img/huella-blanca.png" ) no-repeat center center transparent
 .footer__nav--active
   animation: .5s ease .5s 1 normal forwards running footerIn

@@ -16646,6 +16646,28 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/resources\/assets\/img\/huella-blanca.png": {
+		"ft": 32768,
+		"iS": 1246,
+		"oA": 0,
+		"oAP": "\/public\/assets\/img\/huella-blanca.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/resources\/assets\/img\/huella-verde.png": {
+		"ft": 32768,
+		"iS": 1314,
+		"oA": 0,
+		"oAP": "\/public\/assets\/img\/huella-verde.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/resources\/assets\/img\/IAMS-logo.png": {
 		"ft": 32768,
 		"iS": 15288,
@@ -16869,6 +16891,14 @@
 		"ft": 512,
 		"oA": 1,
 		"oAP": "\/public\/assets\/results.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/resources\/assets\/pug\/personality-test\/section.pug": {
+		"cOD": 1,
+		"ft": 512,
+		"oA": 1,
+		"oAP": "\/public\/assets\/section.html",
 		"oF": 0,
 		"oS": 0
 		},
