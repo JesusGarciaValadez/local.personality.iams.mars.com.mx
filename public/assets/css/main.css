@@ -1170,7 +1170,7 @@ main {
         font-size: 2.5em;
         font-weight: bold;
         line-height: 1em;
-        margin: 75px auto 25px;
+        margin: 55px auto 25px;
         padding: 0;
         width: 750px; }
         .form .fieldset .fieldset__h2 .fieldset__legend {
@@ -1180,7 +1180,7 @@ main {
                   transform: translate(0, -50%);
           top: 50%; }
       .form .fieldset .fieldset__ul {
-        margin: 5.625em auto;
+        margin: 40px auto;
         width: 960px; }
         .form .fieldset .fieldset__ul .fieldset__li {
           width: 22%; }
