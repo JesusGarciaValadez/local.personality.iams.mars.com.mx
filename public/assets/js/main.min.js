@@ -49,7 +49,7 @@
 } )();
 
 $( function () {
-  var $header__li      = $( ".header__li" ),
+  var $header__li       = $( ".header__li" ),
       $form             = $( ".form" ),
       $fieldset         = $( "fieldset" ),
       $fieldset__li     = $( ".fieldset__li" ),
@@ -59,7 +59,35 @@ $( function () {
       $results          = $( ".results" ),
       $results__clear   = $( ".results__clear" ),
       $footer__li       = $( ".footer__li" ),
+      $menu__a          = $( ".header__a, .footer__a" ),
       counter           = 0;
+
+  $menu__a.on( 'click', function ( event ) {
+    event.stopPropagation();
+    event.preventDefault();
+
+    var __index  = $( event.currentTarget ).data( "index" );
+    $header__li.removeClass( "header__li--active" );
+    $fieldset.removeClass( "fieldset--active" );
+    $footer__li.removeClass( "footer__li--active" );
+
+    $header__li.map( function ( index, domElement ) {
+      if ( index < __index ) {
+        $( domElement ).addClass( "header__li--active" );
+      }
+    } );
+    $fieldset.map( function ( index, domElement ) {
+      if ( index < __index ) {
+        $( domElement ).addClass( "fieldset--active" );
+      }
+    } );
+    $footer__li.map( function ( index, domElement ) {
+      if ( index < __index ) {
+        $( domElement ).addClass( "footer__li--active" );
+      }
+      counter = __index - 1;
+    } );
+  } );
 
   $fieldset__cancel.on( 'click', function ( event ) {
     event.stopPropagation();
