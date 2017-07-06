@@ -1203,7 +1203,7 @@ main {
         -webkit-box-direction: normal;
             -ms-flex-flow: row wrap;
                 flex-flow: row wrap;
-        margin: 50px auto 0;
+        margin: 30px auto 0;
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
@@ -1307,7 +1307,7 @@ main {
         width: 100%; }
         .results .results__wrapper .results__p .results__clear {
           font-size: 1.125em;
-          margin: 2.7777777778em auto;
+          margin: 1.25em;
           padding: 1.6666666667em 1.1111111111em;
           width: 16%; }
   .footer {
