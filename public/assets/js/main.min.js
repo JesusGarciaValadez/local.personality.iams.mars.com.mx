@@ -133,9 +133,9 @@ $( function () {
         $product_img.attr( "src", productImg );
         $product_img.attr( "alt", productImg );
 
-        $overlay.removeClass( "overlay--active" );
         $( $section ).addClass( $slideClassActive );
         setTimeout( function () {
+          $overlay.removeClass( "overlay--active" );
           $form.removeClass( "form--active" );
         }, 3000 );
       } );

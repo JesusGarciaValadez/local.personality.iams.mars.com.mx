@@ -1,39 +1,94 @@
+/* animation: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+html, body, main
 main
-  .header
-    .img__header
-    .header__nav--active
-      .header__ul
-        .header__li
-          .header__p
-            .header__a
-  .intro
-    .intro__img
-    .title
-    .intro__title
-    .button
-    .intro__button
-  .personality
-    .fieldset.height
+.button
+.header
+  .header__img
+  .header__nav
+.section, .form, .results
+.section
+  .section__div
+  .section__img
+  .section__img-logo
+  .section__h1
+    .section__strong
+    .section__span
+  .section__a
+.form
+  .fieldset
+    padding: 71px 0 0
+    .fieldset__h2
+      font-size: 1.5em // 25px
+      line-height: 1em
+      margin: 35px auto 25px
+      padding: 0
+      width: 480px
       .fieldset__legend
-        strong
-      .fieldset__ul
-        .fieldset__li
-          .fieldset__label
-            .fieldset__figure
-              .fieldset__img
-              .fieldset__caption
-            .fieldset__radio
-      .fieldset__buttons
-        .button.fieldset__cancel--active
-        .button.fieldset__next--inactive
-  .results
-    .title.results__h2
-    .results__wrapper
-      .results__div--left
-        .dog.results__img
-      .results__div--right
-        .results__h3
-        p.results__p
-        .results__div
-          .product.results__img
-      .button.results__clear
+        font-size: 2.45em
+        left: -60px
+        transform: translate( 0, -50% )
+        top: 50%
+    .fieldset__ul
+      .fieldset__li
+        width: 31.2075983718vw
+        .fieldset__label
+          .fieldset__figure
+            .fieldset__img
+            .fieldset__caption
+              font-size: 15px
+          .fieldset__radio
+      .fieldset__li--active
+    .fieldset__buttons
+      .button
+      .fieldset__cancel--active
+      .fieldset__next--inactive
+      .fieldset__next--active
+  .fieldset--intro
+    .fieldset__ul
+      .fieldset__li
+        .fieldset__label
+          .fieldset__figure
+            .fieldset__caption
+  .fieldset--active
+  .fieldset-down
+  .fieldset--active-down
+.form--overlay
+.form--active
+.overlay
+  .modal
+    .modal__ul
+      .modal__li
+        .modal__span
+    .modal__p
+.overlay--active
+  .modal
+.results
+  .results__h3
+    margin: 3% 0
+  .results__wrapper
+    .results__div--left
+      .results__img#dog-img
+    .results__div--right
+      .results__h3
+      .results__p
+        font-size: 16px
+        width: 80%
+      .results__img#product-img
+    > .results__p
+      .results__clear
+        width: 20%
+.results--active
+.footer__nav
+  .footer__ul
+    .footer__li, .footer__li--active
+    .footer__li
+      .footer__background
+      .footer__p
+        font-size: 1em
+        .footer__a
+        .footer__span
+    .footer__li--active
+      .footer__background
+      .footer__p
+        .footer__span
+.footer__nav--active

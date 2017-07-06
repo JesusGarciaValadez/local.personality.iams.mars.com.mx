@@ -313,12 +313,7 @@ textarea {
     left: 50%;
     right: 50%;
     top: 50%; }
-  50% {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0; }
-  100% {
+  50%, 100% {
     bottom: 0;
     left: 0;
     right: 0;
@@ -330,44 +325,53 @@ textarea {
     left: 50%;
     right: 50%;
     top: 50%; }
-  50% {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0; }
-  100% {
+  50%, 100% {
     bottom: 0;
     left: 0;
     right: 0;
     top: 0; } }
 
-@-webkit-keyframes animateCircles {
+@-webkit-keyframes bigCircles {
   0% {
-    background-color: #9B9B99;
-    height: 20px;
-    width: 20px; }
+    background-color: #9B9B99; }
   70% {
     background-color: #41974F;
-    height: 30px;
-    width: 30px; }
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2); }
   100% {
-    background-color: #41974F;
-    height: 28px;
-    width: 28px; } }
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1); } }
 
-@keyframes animateCircles {
+@keyframes bigCircles {
   0% {
-    background-color: #9B9B99;
-    height: 20px;
-    width: 20px; }
+    background-color: #9B9B99; }
   70% {
     background-color: #41974F;
-    height: 30px;
-    width: 30px; }
+    -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2); }
   100% {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1); } }
+
+@-webkit-keyframes smallCirles {
+  0% {
     background-color: #41974F;
-    height: 28px;
-    width: 28px; } }
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1); }
+  70%, 100% {
+    background-color: #9B9B99;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1); } }
+
+@keyframes smallCirles {
+  0% {
+    background-color: #41974F;
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1); }
+  70%, 100% {
+    background-color: #9B9B99;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1); } }
 
 /* animation: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name */
 html, body, main {
@@ -469,9 +473,22 @@ main {
   width: 100vw;
   z-index: 1; }
   .form .fieldset {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: #F7F6F3;
     box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     height: 100vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 13.125vw 0 12.6%;
     position: absolute;
     top: 0;
@@ -707,17 +724,17 @@ main {
           height: 20px;
           width: 20px; }
         .overlay .modal .modal__ul .modal__li:nth-child(1) .modal__span {
-          -webkit-animation: 1.3s ease 2s infinite alternate-reverse none running animateCircles;
-                  animation: 1.3s ease 2s infinite alternate-reverse none running animateCircles; }
+          -webkit-animation: 1.3s ease 0s infinite alternate forwards running bigCircles, 1.3s ease 4.2s infinite alternate forwards running smallCircles;
+                  animation: 1.3s ease 0s infinite alternate forwards running bigCircles, 1.3s ease 4.2s infinite alternate forwards running smallCircles; }
         .overlay .modal .modal__ul .modal__li:nth-child(2) .modal__span {
-          -webkit-animation: 1.3s ease 4s infinite alternate-reverse none running animateCircles;
-                  animation: 1.3s ease 4s infinite alternate-reverse none running animateCircles; }
+          -webkit-animation: 1.3s ease 1.3s infinite alternate forwards running bigCircles, 1.3s ease 5.5s infinite alternate forwards running smallCircles;
+                  animation: 1.3s ease 1.3s infinite alternate forwards running bigCircles, 1.3s ease 5.5s infinite alternate forwards running smallCircles; }
         .overlay .modal .modal__ul .modal__li:nth-child(3) .modal__span {
-          -webkit-animation: 1.3s ease 6s infinite alternate-reverse none running animateCircles;
-                  animation: 1.3s ease 6s infinite alternate-reverse none running animateCircles; }
+          -webkit-animation: 1.3s ease 2.6s infinite alternate forwards running bigCircles, 1.3s ease 6.8s infinite alternate forwards running smallCircles;
+                  animation: 1.3s ease 2.6s infinite alternate forwards running bigCircles, 1.3s ease 6.8s infinite alternate forwards running smallCircles; }
         .overlay .modal .modal__ul .modal__li:nth-child(4) .modal__span {
-          -webkit-animation: 1.3s ease 8s infinite alternate-reverse none running animateCircles;
-                  animation: 1.3s ease 8s infinite alternate-reverse none running animateCircles; }
+          -webkit-animation: 1.3s ease 3.9s infinite alternate forwards running bigCircles, 1.3s ease 7.1s infinite alternate forwards running smallCircles;
+                  animation: 1.3s ease 3.9s infinite alternate forwards running bigCircles, 1.3s ease 7.1s infinite alternate forwards running smallCircles; }
         .overlay .modal .modal__ul .modal__li .modal__span {
           background-color: #9B9B99;
           border-radius: 50%;
@@ -759,16 +776,17 @@ main {
     margin: 10% 0 3%;
     text-transform: uppercase; }
   .results .results__wrapper {
-    background-color: #FFFFFF;
     box-sizing: border-box; }
     .results .results__wrapper .results__div--left {
       width: 100%; }
       .results .results__wrapper .results__div--left .results__img#dog-img {
         width: 100%; }
     .results .results__wrapper .results__div--right {
-      margin: 3% 5%;
+      background-color: #FFFFFF;
+      margin: auto;
+      padding: 3% 5%;
       position: relative;
-      width: 100%; }
+      width: 90%; }
       .results .results__wrapper .results__div--right .results__h3 {
         font: normal 17px/1em "GothamBold";
         margin: 0;
@@ -785,22 +803,20 @@ main {
         right: -5px;
         position: absolute;
         width: 30%; }
-    .results .results__wrapper > .results__p {
-      margin: 0; }
-      .results .results__wrapper > .results__p .results__clear {
-        -ms-flex-item-align: center;
-            -ms-grid-row-align: center;
-            align-self: center;
-        background-color: #009B43;
-        border: 0 none transparent;
-        border-radius: 20px;
-        clear: both;
-        color: #FFFFFF;
-        display: block;
-        font: normal 11px/0 "GothamBold";
-        margin: 0 auto;
-        padding: 25px 15px;
-        width: 40%; }
+    .results .results__wrapper > .results__p .results__clear {
+      -ms-flex-item-align: center;
+          -ms-grid-row-align: center;
+          align-self: center;
+      background-color: #009B43;
+      border: 0 none transparent;
+      border-radius: 20px;
+      clear: both;
+      color: #FFFFFF;
+      display: block;
+      font: normal 11px/0 "GothamBold";
+      margin: 0 auto;
+      padding: 25px 15px;
+      width: 40%; }
 
 .results--active {
   -webkit-animation: .5s ease-out 2s 1 normal both running resultsIn;
@@ -964,6 +980,36 @@ main {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    @mixin ========================================================================= */
+@media only screen and (min-width: 46.0625em) and (max-width: 63.9375em) {
+  /* animation: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+  .form .fieldset {
+    padding: 71px 0 0; }
+    .form .fieldset .fieldset__h2 {
+      font-size: 1.5em;
+      line-height: 1em;
+      margin: 35px auto 25px;
+      padding: 0;
+      width: 480px; }
+      .form .fieldset .fieldset__h2 .fieldset__legend {
+        font-size: 2.45em;
+        left: -60px;
+        -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+        top: 50%; }
+    .form .fieldset .fieldset__ul .fieldset__li {
+      width: 31.2075983718vw; }
+      .form .fieldset .fieldset__ul .fieldset__li .fieldset__label .fieldset__figure .fieldset__caption {
+        font-size: 15px; }
+  .results .results__h3 {
+    margin: 3% 0; }
+  .results .results__wrapper .results__div--right .results__p {
+    font-size: 16px;
+    width: 80%; }
+  .results .results__wrapper > .results__p .results__clear {
+    width: 20%; }
+  .footer__nav .footer__ul .footer__li .footer__p {
+    font-size: 1em; } }
+
 @media only screen and (min-width: 64em) {
   .header {
     -webkit-box-align: center;
@@ -1060,8 +1106,7 @@ main {
               text-decoration: none; }
         .header .header__nav .header__ul .header__li--active {
           background-color: transparent;
-          border-right: 1px solid;
-          border: 0 none transparent;
+          border: none;
           border-bottom: 5px solid #006539; }
           .header .header__nav .header__ul .header__li--active .header__p {
             color: #FFFFFF; }
@@ -1101,7 +1146,7 @@ main {
       -webkit-transform: translate(-50%, 0);
               transform: translate(-50%, 0); }
   .form {
-    padding: 7.7% 0 0;
+    padding: 7.8125vw 0 0;
     right: 0; }
     .form .fieldset {
       -webkit-box-align: center;
@@ -1110,26 +1155,31 @@ main {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap;
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      top: 7.8vw;
-      padding: 3.75em 0 0; }
+      top: 0;
+      padding: 80px 0 0; }
       .form .fieldset .fieldset__h2 {
         font-size: 2.5em;
         font-weight: bold;
         line-height: 1em;
-        margin: 0;
-        padding: 0 3.5em; }
+        margin: 75px auto 25px;
+        padding: 0;
+        width: 750px; }
         .form .fieldset .fieldset__h2 .fieldset__legend {
           font-size: 2.45em;
-          left: 4%;
+          left: -100px;
           -webkit-transform: translate(0, -50%);
                   transform: translate(0, -50%);
           top: 50%; }
       .form .fieldset .fieldset__ul {
         margin: 5.625em auto;
-        width: 95%; }
+        width: 960px; }
         .form .fieldset .fieldset__ul .fieldset__li {
           width: 22%; }
           .form .fieldset .fieldset__ul .fieldset__li:nth-child(odd), .form .fieldset .fieldset__ul .fieldset__li:nth-child(even) {
@@ -1139,7 +1189,7 @@ main {
           .form .fieldset .fieldset__ul .fieldset__li:last-child {
             margin-right: 0; }
           .form .fieldset .fieldset__ul .fieldset__li .fieldset__label .fieldset__figure .fieldset__caption {
-            font-size: 1em; }
+            font-size: 0.9375em; }
       .form .fieldset .fieldset__buttons {
         -webkit-box-align: center;
             -ms-flex-align: center;
@@ -1155,9 +1205,10 @@ main {
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
-        width: 21.875em; }
+        width: 360px; }
         .form .fieldset .fieldset__buttons .button {
           font-size: 1em;
+          padding: 30px 25px;
           width: 9.625em; }
           .form .fieldset .fieldset__buttons .button:nth-child(odd) {
             margin-left: 0; }
@@ -1174,7 +1225,7 @@ main {
             animation: .1s ease 0s 1 normal forwards running formIn; }
   .results {
     background-color: #F7F6F3;
-    padding: 10% 2%; }
+    padding: 80px 2% 0; }
     .results .title.results__h3 {
       font-size: 2.5em;
       font-weight: bold;
@@ -1185,6 +1236,7 @@ main {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
+      background-color: #F7F6F3;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -1213,7 +1265,7 @@ main {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        background-color: #F7F6F3;
+        background-color: #FFFFFF;
         box-sizing: border-box;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1226,9 +1278,10 @@ main {
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
+        margin: 0;
         padding: 30px 0 30px 50px;
         position: relative;
-        width: 58%; }
+        width: 60%; }
         .results .results__wrapper .results__div--right .results__h3 {
           -ms-flex-item-align: start;
               align-self: flex-start;

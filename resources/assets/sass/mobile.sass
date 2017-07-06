@@ -87,9 +87,13 @@ main
   width: 100vw
   z-index: 1
   .fieldset
+    align-items: center
     background-color: $fieldset-background-color
     box-sizing: border-box
+    display: flex
+    flex-flow: row wrap
     height: 100vh
+    justify-content: center
     padding: 13.125vw 0 12.6%
     position: absolute
     top: 0
@@ -275,16 +279,16 @@ main
           width: 20px
         &:nth-child( 1 )
           .modal__span
-            animation: 1.3s ease 2s infinite alternate-reverse none running animateCircles
+            animation: 1.3s ease 0s infinite alternate forwards running bigCircles, 1.3s ease 4.2s infinite alternate forwards running smallCircles
         &:nth-child( 2 )
           .modal__span
-            animation: 1.3s ease 4s infinite alternate-reverse none running animateCircles
+            animation: 1.3s ease 1.3s infinite alternate forwards running bigCircles, 1.3s ease 5.5s infinite alternate forwards running smallCircles
         &:nth-child( 3 )
           .modal__span
-            animation: 1.3s ease 6s infinite alternate-reverse none running animateCircles
+            animation: 1.3s ease 2.6s infinite alternate forwards running bigCircles, 1.3s ease 6.8s infinite alternate forwards running smallCircles
         &:nth-child( 4 )
           .modal__span
-            animation: 1.3s ease 8s infinite alternate-reverse none running animateCircles
+            animation: 1.3s ease 3.9s infinite alternate forwards running bigCircles, 1.3s ease 7.1s infinite alternate forwards running smallCircles
         .modal__span
           background-color: $modal__li-background-color
           border-radius: 50%
@@ -318,16 +322,17 @@ main
     margin: 10% 0 3%
     text-transform: uppercase
   .results__wrapper
-    background-color: $results__wrapper-background-color
     box-sizing: border-box
     .results__div--left
       width: 100%
       .results__img#dog-img
         width: 100%
     .results__div--right
-      margin: 3% 5%
+      background-color: $results__wrapper-background-color
+      margin: auto
+      padding: 3% 5%
       position: relative
-      width: 100%
+      width: 90%
       .results__h3
         font: normal 17px/1em $Gotham-Bold
         margin: 0
@@ -345,7 +350,6 @@ main
         position: absolute
         width: 30%
     > .results__p
-      margin: 0
       .results__clear
         align-self: center
         background-color: $fieldset__next--active-background-color

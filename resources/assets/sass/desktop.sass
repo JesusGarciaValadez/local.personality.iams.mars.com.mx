@@ -65,8 +65,7 @@ html, body, main
             text-decoration: none
       .header__li--active
         background-color: transparent
-        border-right: 1px solid
-        border: 0 none transparent
+        border: none
         border-bottom: 5px solid $header__li-border-color
         .header__background
           //animation: .5s ease 0s 1 normal forwards running fillFooter
@@ -107,28 +106,30 @@ html, body, main
     position: relative
     transform: translate( -50%, 0 )
 .form
-  padding: 7.7% 0 0
+  padding: 7.8125vw 0 0 // 80px 0 0
   right: 0;
   .fieldset
     align-items: center
     display: flex
+    flex-flow: row wrap
     justify-content: center
-    top: 7.8vw
-    padding: 3.75em 0 0 // 60px 0 0
+    top: 0
+    padding: 80px 0 0 // 80px 0 0
     .fieldset__h2
       font-size: 2.5em // 40px
       font-weight: bold
       line-height: 1em // 100px
-      margin: 0
-      padding: 0 3.5em // 0 140px
+      margin: 75px auto 25px
+      padding: 0
+      width: 750px
       .fieldset__legend
         font-size: 2.45em
-        left: 4%
+        left: -100px
         transform: translate( 0, -50% )
         top: 50%
     .fieldset__ul
       margin: 5.625em auto // 90px
-      width: 95%
+      width: 960px
       .fieldset__li
         width: 22%
         &:nth-child( odd ), &:nth-child( even )
@@ -141,7 +142,7 @@ html, body, main
           .fieldset__figure
             .fieldset__img
             .fieldset__caption
-              font-size: 1em // 16px
+              font-size: 0.9375em // 15px
           .fieldset__radio
     .fieldset__buttons
       align-items: center
@@ -149,9 +150,10 @@ html, body, main
       flex-flow: row wrap
       margin: 50px auto 0
       justify-content: center
-      width: 21.875em
+      width: 360px
       .button
         font-size: 1em
+        padding: 30px 25px
         &:nth-child( odd )
           margin-left: 0
         &:nth-child( even )
@@ -170,7 +172,7 @@ html, body, main
   animation: .1s ease 0s 1 normal forwards running formIn
 .results
   background-color: $background-color
-  padding: 10% 2%
+  padding: 80px 2% 0
   .title.results__h3
     font-size: 2.5em // 40px
     font-weight: bold
@@ -179,6 +181,7 @@ html, body, main
     padding: 0
   .results__wrapper
     align-items: center
+    background-color: $results-background-color
     display: flex
     flex-flow: row wrap
     justify-content: flex-start
@@ -196,15 +199,16 @@ html, body, main
         width: auto
     .results__div--right
       align-items: center
-      background-color: $results-background-color
+      background-color: $results__wrapper-background-color
       box-sizing: border-box
       display: flex
       flex-flow: column nowrap
       height: 100%
       justify-content: center
+      margin: 0
       padding: 30px 0 30px 50px
       position: relative
-      width: 58%
+      width: 60%
       .results__h3
         align-self: flex-start
         font-size: 30px
