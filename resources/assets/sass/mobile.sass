@@ -87,14 +87,14 @@ main
   width: 100vw
   z-index: 1
   .fieldset
-    align-items: center
+    align-items: flex-start
     background-color: $fieldset-background-color
     box-sizing: border-box
     display: flex
     flex-flow: row wrap
     height: 100vh
     justify-content: center
-    padding: 13.125vw 0 12.6%
+    padding: 13.125vw 0 150px
     position: absolute
     top: 0
     right: -100vw
@@ -119,7 +119,7 @@ main
       font-family: $Gotham-Bold
       font-size: 0.8125em // 14px
       line-height: 1.5em
-      margin: 1.875em 0 0.625em // 30px 0 10px
+      margin: 2.1428571429em 0 0.7142857143em // 30px 0 10px
       padding: 0 2.1em 0 5em // 0 29.4px 0 70px
       position: relative
       text-transform: uppercase
@@ -138,12 +138,12 @@ main
       flex-flow: row wrap
       margin: 0 auto
       padding: 0
-      width: 80%
+      width: 65vw
       .fieldset__li
         display: inline-flex
         cursor: pointer
         margin: 2.5% 4%
-        width: 36.5625vw
+        width: 46%
         &:nth-child( even )
           margin-right: 0
         &:nth-child( odd )
@@ -169,7 +169,7 @@ main
               color: $fieldset__figcaption-color
               cursor: pointer
               display: block
-              font: normal 9px/1.2em $Gotham-Light
+              font: normal 10px/1.2em $Gotham-Light
               text-align: left
               padding: 10px
               position: relative

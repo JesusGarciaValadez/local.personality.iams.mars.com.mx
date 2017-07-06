@@ -473,9 +473,9 @@ main {
   width: 100vw;
   z-index: 1; }
   .form .fieldset {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     background-color: #F7F6F3;
     box-sizing: border-box;
     display: -webkit-box;
@@ -489,7 +489,7 @@ main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 13.125vw 0 12.6%;
+    padding: 13.125vw 0 150px;
     position: absolute;
     top: 0;
     right: -100vw;
@@ -514,7 +514,7 @@ main {
       font-family: "GothamBold";
       font-size: 0.8125em;
       line-height: 1.5em;
-      margin: 1.875em 0 0.625em;
+      margin: 2.1428571429em 0 0.7142857143em;
       padding: 0 2.1em 0 5em;
       position: relative;
       text-transform: uppercase;
@@ -539,14 +539,14 @@ main {
               flex-flow: row wrap;
       margin: 0 auto;
       padding: 0;
-      width: 80%; }
+      width: 65vw; }
       .form .fieldset .fieldset__ul .fieldset__li {
         display: -webkit-inline-box;
         display: -ms-inline-flexbox;
         display: inline-flex;
         cursor: pointer;
         margin: 2.5% 4%;
-        width: 36.5625vw; }
+        width: 46%; }
         .form .fieldset .fieldset__ul .fieldset__li:nth-child(even) {
           margin-right: 0; }
         .form .fieldset .fieldset__ul .fieldset__li:nth-child(odd) {
@@ -572,7 +572,7 @@ main {
               color: #FFFFFF;
               cursor: pointer;
               display: block;
-              font: normal 9px/1.2em "GothamLight";
+              font: normal 10px/1.2em "GothamLight";
               text-align: left;
               padding: 10px;
               position: relative; }
@@ -1217,8 +1217,10 @@ main {
           .form .fieldset .fieldset__buttons .button:nth-child(even) {
             margin-left: 1.875em;
             margin-right: 0; }
-    .form .fieldset--intro .fieldset__ul .fieldset__li {
-      width: 30%; }
+    .form .fieldset--intro .fieldset__ul {
+      width: 800px; }
+      .form .fieldset--intro .fieldset__ul .fieldset__li {
+        width: 30%; }
   .form--overlay {
     -webkit-animation: 3s ease 0s 1 normal both running formInOut;
             animation: 3s ease 0s 1 normal both running formInOut; }
